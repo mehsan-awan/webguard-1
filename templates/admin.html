@@ -1,0 +1,215 @@
+{% extends "base_site_admin.html" %}
+{% block title %} Admin {% endblock title %}
+
+{% block stylesheets %}
+{% endblock stylesheets %}
+
+{% block content %}
+
+ {% include "site_template/navigation.html" %}
+
+
+
+ <div class="header  pb-8 pt-5 pt-md-8" style="background-image: linear-gradient(to right, #252525 , #30BBD2);">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+          <div class="row">
+              <div class="col-xl-1 col-lg-">
+              </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Clients</h5>
+                        <span class="h2 font-weight-bold mb-0" >{{ admin_stats.0 }}</span>
+
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                        <i class="fas fa-robot"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+<!--                  <b><span class="text-primary mr-2" >Bot is waiting for command.....!!</span></b>-->
+                  </p>
+                </div>
+              </div>
+            </div>
+
+               <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Total Websites</h5>
+                        <span class="h2 font-weight-bold mb-0" >{{ admin_stats.1 }}</span>
+
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                        <i class="fas fa-search"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+<!--                  <b><span class="text-primary mr-2" >Bot is waiting for command.....!!</span></b>-->
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">HDD Utilized</h5>
+                      <span class="h2 font-weight-bold mb-0" id="HDD_Total_Used">Initiallizing...</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                        <i class="fas fa-hdd"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 mb-0 text-muted text-sm">
+<!--                    <span class="text-nowrap" id="HDD_Stats">Initiallizing...</span>-->
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ </div>
+
+    <div class="container-fluid mt--7">
+
+       <div class="row">
+      <div class="col-xl-12 col-md-12 col-xs-12 col-lg-12">
+        <div class="card shadow">
+          <div class="card-header bg-transparent">
+            <div class="row align-items-center">
+              <div class="col">
+                  <div class="row">
+                      <h1 class="col-md-12" style="padding-left: 40%;"><strong>ADMIN PANEL</strong></h1>
+
+                      </div>
+
+                <!--  Body Tables      -->
+
+                   <div class="card-body" style="width:90%">
+             <h1>Sites Under Scan</h1>
+                    <table id="example" class="table table-striped table-bordered">
+                        <thead style="text-align: center;">
+						<tr>
+							<th>Username </th>
+                            <th>Website </th>
+
+						</tr>
+
+					</thead>
+
+                    <tbody style="text-align: center;">
+                    {% for username,website in zip_list %}
+                        <tr>
+                            <td>{{ username }}</td>
+                            <td><a href="/admin?id={{ website }}" id="sitename" name="sitename" methods="GET">{{ website }} </a></td>
+
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+
+                    </table>
+         </div>
+
+
+
+                     <div class="card-body" style="width:90%">
+        {% if error %}
+
+
+                 <div >
+                     <h3 style="color: #FF0000;">ERROR: {{ error }}</h3>
+                 </div>
+             {% elif zip_list_ips %}
+            <h1>Visitor IP Logs</h1>
+                    <table id="example1" class="table table-striped table-bordered">
+                        <thead style="text-align: center;">
+						<tr>
+							<th>Site </th>
+                            <th>IP Address </th>
+                            <th>City, Country</th>
+						</tr>
+
+
+
+					</thead>
+                    <tbody style="text-align: center;">
+                    {% for ip, city in zip_list_ips %}
+                        <tr>
+                            <td>{{ data }}</td>
+                            <td>{{ ip }} </td>
+                            <td>{{ city }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                    </table>
+
+
+
+            <div class="map Frame" style="padding-left: 10%;">
+           <iframe  src="{% url 'location' %}"
+                         frameborder="0"
+                         marginheight="0"
+                         marginwidth="0"
+                         width="90%"
+                         height="600"
+                         scrolling="auto">
+
+                </iframe>
+            </div>
+        {% endif %}
+             </div>
+
+
+
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+        {% include "site_template/footer.html" %}
+
+    </div>
+
+{% endblock content %}
+
+{% block javascripts %}
+
+
+{% endblock javascripts %}

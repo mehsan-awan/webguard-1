@@ -1,0 +1,1232 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <style>
+        
+        .our-team {
+            text-align: center;
+            transition: all 0.5s ease 0s;
+        }
+
+        .container-centre {
+                 /* ... */
+                 align-items: center;
+                             }
+        .my-size{
+              width:275px;
+              height:275px;
+              margin: auto;
+        }
+        .pic{
+            border-radius: 50%;
+        }
+
+            .our-team:hover {
+                box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            }
+
+            .our-team .pic {
+                overflow: hidden;
+                position: relative;
+            }
+
+                .our-team .pic:before,
+                .our-team .pic:after {
+                    content: "";
+                    width: 200%;
+                    height: 80%;
+                    background: rgba(38,37,37,0.8);
+                    position: absolute;
+                    top: -100%;
+                    left: -4%;
+                    transform: rotate(45deg);
+                    transition: all 0.5s ease 0s;
+                }
+
+                .our-team .pic:after {
+                    background: rgba(241, 193, 64, 0.52);
+                    top: auto;
+                    left: auto;
+                    bottom: -100%;
+                    right: -4%;
+                }
+
+            .our-team:hover .pic:before {
+                top: 0;
+            }
+
+            .our-team:hover .pic:after {
+                bottom: 0;
+            }
+
+            .our-team .pic img {
+                width: 100%;
+                height: auto;
+            }
+
+            .our-team .social {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                position: absolute;
+                bottom: 45%;
+                left: 0;
+                opacity: 0;
+                z-index: 2;
+                transition: all 0.5s ease 0.3s;
+            }
+
+            .our-team:hover .social {
+                opacity: 1;
+            }
+
+            .our-team .social li {
+                display: inline-block;
+            }
+
+                .our-team .social li a {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 20px;
+                    color: #fff;
+                    margin-right: 10px;
+                    position: relative;
+                    transition: all 0.3s ease 0s;
+                }
+
+                    .our-team .social li a:after {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        background: #db162f;
+                        border-radius: 0 20px 20px 20px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: -1;
+                        transition: all 0.3s ease 0s;
+                    }
+
+                    .our-team .social li a:hover:after {
+                        transform: rotate(180deg);
+                    }
+
+            .our-team .team-content {
+                padding: 20px;
+            }
+
+            .our-team .title {
+                font-size: 22px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                color: #047168;
+                text-transform: uppercase;
+                margin-bottom: 7px;
+            }
+
+            .our-team .post {
+                display: block;
+                font-size: 17px;
+                font-weight: 600;
+                color: #707070;
+                text-transform: capitalize;
+            }
+
+        @media only screen and (max-width: 990px) {
+            .our-team {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Team | NCSAEL - Cyber Security</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="css/jquery.pwstabs.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="css/fontgoogleapi.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/hover-min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/cloudfarefontawsome.css" />
+
+
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="js/gooletamanager.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118029809-1');
+    </script>
+</head>
+<body data-spy="scroll" data-target="#serviceNav">
+    <form id="form1" runat="server">
+
+        <header>
+            <div class="header">
+
+                <ul>
+                    <li><a href="Contact.html" class="waves-effect waves-light btn goldBtn" id="myBtn"> <span class="glyphicon glyphicon-envelope" style='font-size: 30px'></span></a></li>
+                </ul>
+
+                <nav class="navbar navbar-fixed-top navigationNavbar" role="navigation">
+
+                    <div class="row " style="background-color: #02181d">
+
+                        <div class="col-sm-12 myBtn" href="Index.html">
+
+                            <h4 style="text-align: center; color: white;"><b>NATIONAL CYBER SECURITY AUDITING AND EVALUATION LAB (NCSAEL), MCS-NUST</b></h4>
+                        </div>
+                    </div>
+                    <div class="container" style="width:80%">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="Index.html">
+                                <img src="img/logo.png" class="" alt=" " /></a>
+
+
+                                <div id="navbar" class="navbar-collapse collapse pull-right">
+                                    <ul class="nav navbar-nav text-right mainNavigation">
+
+                                        <li class="active"><a href="Index.html" title="Ncsael">Home</a></li>
+                                        <li><a href="Services.html" title="Services">Services</a></li>
+                                      <li><a href="Projects.html" title="Projects">Projects</a></li>
+
+                                       	<li id="conference"  ><a href="conference.html" class="dropdown-toggle" data-toggle="dropdown" title="Conference">Conference <span class="caret"></span></a>
+
+
+										 <ul class="dropdown-menu menu0">
+
+										  <li><a href="conference.html">SSTM 2021</a></li>
+										  <li><a target="_blank" href="http://conferences.mcs.nust.edu.pk/comtech2021/index.html">COMTECH 2021</a></li>
+										</ul>
+
+                                        </li>
+
+
+
+
+										<li id="Team"  ><a href="Team.html" class="dropdown-toggle" data-toggle="dropdown" title="Team">Team <span class="caret"></span></a>
+
+
+										 <ul class="dropdown-menu menu0">
+
+										  <li><a href="Team.html">Current Team</a></li>
+										  <li><a href="Alumni.html">Alumni</a></li>
+										</ul>
+
+
+										</li>
+
+
+										<li><a href="Achievements.html" title="Achievements">Achievements</a></li>
+                                        <li><a href="AboutUs.html" title="About Us">About Us</a></li>
+                                        <li><a href="Partners.html" title="Partners">Partners</a></li>
+
+                                        <li id="News"  ><a href="NewsAndEvents.html" class="dropdown-toggle" data-toggle="dropdown" title="News Panel">News Panel<span class="caret"></span></a>
+
+
+										 <ul class="dropdown-menu menu0">
+
+										  <li><a href="NewsAndEvents.html">News & Events</a></li>
+										  <li><a href="FakeNews.html">Top Cyber News</a></li>
+										</ul>
+
+										</li>
+
+                                        <li><a href="Contact.html" title="Contact">Contact Us</a></li>
+                                    </ul>
+                                </div>
+
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        
+        <div class="redRow rowSet topBanner bannerteam pageBanner">
+            <div class="inside">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h1 class="animated fadeIn">Meet the team!</h1>
+                            <p class="animated fadeIn">At NCSAEL, we have pooled in highly passionate and exceptionally skilled cyber security experts and enthusiasts from all over Pakistan</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="whiteRow collaborateRow rowSet">
+            <div class="container">
+
+                <div class="shieldWrap">
+                    <div class="shieldLine">
+                        <div class="innerShield">
+                            <img src="img/mid-icon-shield-collaborate.png" alt=" " />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 col-sm-push-2">
+                        <div class="rowHeadline">
+                            <h2>Our Team</h2>
+                            <h3>"Alone we can do so little, together we can do so much" -Helen Keller</h3>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+
+        <div>
+
+
+            <!-- // core team -->
+            <div class="whiteRow collaborateRow rowSet">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-push-2">
+                            <div class="rowHeadline">
+                                <h2>Core Team</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="images/haider.png">
+                                <ul class="social">
+                                    <li><a href="https://www.linkedin.com/in/haider-abbas-6106143b/" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <a href="Director.html"><h3 class="title">Dr. Haider Abbas</h3></a>
+                                <span class="post">Director - NCSAEL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="images/ashraf.png">
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="https://pk.linkedin.com/in/ashraf-masood-36aa86158" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Dr. Ashraf Masood</h3>
+                                <span class="post">Co-PI - IT Security Assessment</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <div class="pic">
+                                <img src="images/rashid.png">
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Dr. Imran Rashid</h3>
+                                <span class="post">Co-PI - Preparedness for CCTL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team ">
+                            <div class="pic">
+                                <img src="images/Faisal.jpg">
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="https://www.linkedin.com/in/muhammad-faisal-amjad-9721418" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Dr. Muhammad Faisal Amjad</h3>
+                                <span class="post">Co-PI - Advanced Persistant Threat</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <br>
+
+            </div>
+            <hr>
+            <br>
+
+        
+
+             <!-- //..........................bdm and  Team Lead heading -->
+
+
+            <div class="whiteRow collaborateRow rowSet">
+                <div class="container">
+                    <div class="row ">
+                        <!--<div class=" col-sm-6">
+                            <div class="rowHeadline">
+                                <h2>Team Lead</h2>
+                            </div>
+                            
+                        </div>  -->
+                        <div class=" col-sm-6 ">
+                            <div class="rowHeadline ">
+                                <h2>Business Dev. Manager</h2>
+                            </div>
+                        </div>
+
+                        <div class=" col-sm-6">
+                            <div class="rowHeadline">
+                                <h2>Team Lead</h2>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- //..........................bdm and  Team Lead content -->
+        <div class="container">
+             <div class="row">
+
+                 <div class="col-md-6 col-sm-6 col-sm-12">
+                        <div class="our-team my-size">
+                            <div class="pic">
+                                <img src="images/saif.jpg" />
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">SYED ALI SAIF KAZMI</h3>
+
+                            </div>
+                        </div>
+                    </div>
+
+                 <div class="col-md-6 col-sm-6 col-sm-12">
+
+                        <div class="our-team my-size">
+                            <div class="pic">
+                                <img src="images/maliha.jpg" />
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Maliha Safdar</h3>
+
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+
+
+        </div>
+            
+           
+           <br/> <br/> <br/> <br/> <br/> <br/>
+            <hr>
+
+
+               <!-- // Assoiates -->
+
+
+
+            <div class="whiteRow collaborateRow rowSet">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-push-2">
+                            <div class="rowHeadline">
+                                <h2>Research Associates</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            <br>
+            </div>
+               <div class="container">
+                <div class="row">
+
+                    <!-- <div class="col-md-3 col-sm-6">
+                    </div> -->
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team my-size">
+                            <div class="pic">
+                                <img src="images/abdul.png" />
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="https://www.linkedin.com/in/abdulrehmanjanjua/" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Abdul Rehman</h3>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                     <div class="col-md-3 col-sm-6">
+                        <div class="our-team my-size">
+                            <div class="pic">
+                                <img src="images/arshad.png" />
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="https://www.linkedin.com/in/eeusmanarshad/" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Usman Arshad</h3>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-6">
+                    <div class="our-team my-size">
+                        <div class="pic">
+                            <img src="images/mubarak.png" />
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Mubarak Mehdi</h3>
+
+                        </div>
+                    </div>
+                     </div>
+
+                   <div class="col-md-3 col-sm-6 col-sm-12">
+                        <div class="our-team my-size">
+                            <div class="pic">
+                                <img src="images/ramsha.png" />
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Ramsha Saeed</h3>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                   <br> <br> <br> <br> <br> <br>
+
+
+                <div class="row">
+
+
+
+<!--                <div class="col-md-3 col-sm-6 col-sm-12">-->
+<!--                        <div class="our-team my-size">-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+                    <div  class="col-md-6 col-sm-6" >
+                       <div class="our-team my-size">
+
+                        <div class="pic">
+                            <img src="images/ehsan.jpg" />
+
+
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Muhammad Ehsan ul Haq</h3>
+
+                        </div>
+                    </div>
+                   </div>
+
+                <div class="col-md-6 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic my-size">
+                            <img src="images/maheen.png" />
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="https://www.linkedin.com/in/maheen-fatima-bhutta-ba5b73125/" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Maheen Fatima</h3>
+
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+
+                </div>
+
+            </div>
+             <br> <br> <br> <br>
+
+            <hr />
+
+               <!-- //Developer -->
+
+               <div class="whiteRow collaborateRow rowSet">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-push-2">
+                            <div class="rowHeadline">
+                                <h2>Programmers</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+             <br>
+            <div class="container">
+
+
+                <div class="row">
+
+
+                    <div class="col-md-3 col-sm-6" >
+                       <div class="our-team my-size">
+
+                        <div class="pic">
+                            <img src="images/shumail.jpg" />
+
+
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Shumail Abbasi</h3>
+
+                        </div>
+                    </div>
+                   </div>
+
+
+            <div class="col-md-3 col-sm-6" >
+               <div class="our-team my-size">
+
+                        <div class="pic">
+                            <img src="images/waqas.jpg" />
+
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Waqas Ahmad</h3>
+                        </div>
+                </div>
+                   </div>
+
+
+                    <div class="col-md-3 col-sm-6">
+                    <div class="our-team my-size">
+                        <div class="pic">
+                            <img src="images/faayed.png" />
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">FAAYED AL FAISAL</h3>
+
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="col-md-3 col-sm-6">
+                    <div class="our-team my-size">
+                        <div class="pic">
+                            <img src="images/rabiea.jpg" />
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="https://www.linkedin.com/in/rabiea-ramzan-8237a7159" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Rabiea Ramzan</h3>
+
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+                <br><br><br><br>
+<!--                <div class="row">-->
+
+<!--                    <div class="col-md-12 col-sm-6">-->
+<!--                    <div class="our-team my-size">-->
+<!--                        <div class="pic">-->
+<!--                            <img src="images/rabiea.jpg" />-->
+<!--                            <ul class="social">-->
+<!--                                <li><a href="#" class="fa fa-facebook"></a></li>-->
+<!--                                <li><a href="#" class="fa fa-google-plus"></a></li>-->
+<!--                                <li><a href="#" class="fa fa-twitter"></a></li>-->
+<!--                                <li><a href="https://www.linkedin.com/in/rabiea-ramzan-8237a7159" class="fa fa-linkedin"></a></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="team-content">-->
+<!--                            <h3 class="title">Rabiea Ramzan</h3>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+
+            </div>
+             <br> <br> <br> <br>
+
+            <hr />
+
+
+        <!-- //... Assistant -->
+        <div class="whiteRow collaborateRow rowSet">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-push-2">
+                        <div class="rowHeadline">
+                            <h2>Research Assistants</h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br />
+        <div class="container">
+
+
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic my-size">
+                            <img src="images/farya.JPG" />
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">FARYA AMER</h3>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+
+
+                    <div class="our-team">
+                        <div class="pic my-size">
+                            <img src="images/ameer.jpg" />
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Ameer Hamza</h3>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                        <div class="our-team my-size">
+                            <div class="pic">
+                                <img src="images/zargham.png" />
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="https://www.linkedin.com/in/muhammad-zargham-088101173/" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Muhammad Zargham</h3>
+
+                            </div>
+                        </div>
+              </div>
+
+                 <div class="col-md-3 col-sm-6">
+                        <div class="our-team my-size">
+                            <div class="pic">
+                                <img src="images/fahad.jpeg" />
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Fahad Nadeem</h3>
+
+                            </div>
+                        </div>
+              </div>
+
+
+            </div>
+
+            <br>
+             
+            <div class="row">
+
+                <div class="col-md-6 col-sm-6 col-sm-12">
+                    <div class="our-team my-size">
+                        <div class="pic ">
+                            <img src="images/abeer.png" />
+                            <ul class="social">
+                               <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Abeer Islam</h3>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-sm-12">
+                        <div class="our-team my-size">
+                            <div class="pic">
+                                <img src="images/fatima.png" />
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div>
+                            <div class="team-content">
+                                <h3 class="title">Fatima Khalil Butt</h3>
+
+                            </div>
+                        </div>
+              </div>
+
+            </div>
+
+        </div>
+
+<hr>
+        <br>
+        <br>
+        <br>
+
+        <!-- // phd and research scholars -->
+        <div class="whiteRow collaborateRow rowSet">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-push-2">
+                        <div class="rowHeadline">
+                            <h2>Research Scholars</h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+
+<!--                <div class="col-md-4 col-sm-6">-->
+<!--                    <div class="our-team my-size">-->
+<!--                        <div class="pic">-->
+<!--                            <img src="images/waseem.png">-->
+<!--                            <ul class="social">-->
+<!--                                <li><a href="#" class="fa fa-facebook"></a></li>-->
+<!--                                <li><a href="#" class="fa fa-google-plus"></a></li>-->
+<!--                                <li><a href="#" class="fa fa-twitter"></a></li>-->
+<!--                                <li><a href="#" class="fa fa-linkedin"></a></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="team-content">-->
+<!--                            <h3 class="title">Muhammad Waseem Iqbal</h3>-->
+<!--                            <span class="post">PhD Scholar</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+                <div class="col-md-6 col-sm-6">
+                    <div class="our-team my-size">
+                        <div class="pic">
+                            <img src="images/waleed.png" />
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="https://www.linkedin.com/in/waleed-bin-shahid-0b546914/" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Waleed Bin Shahid</h3>
+                            <span class="post">PhD Scholar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+                    <div class="our-team my-size">
+                        <div class="pic">
+                            <img src="images/temp.png" />
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="https://www.linkedin.com/in/sara-asif-0a162a16a/" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Altaf Ur Rehman</h3>
+                            <span class="post">PhD Scholar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br><br><br><br><br><br><br><br><br>
+
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="our-team my-size">
+                        <div class="pic">
+                            <img src="images/nabeela.jpg">
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Nabeela Bibi</h3>
+                            <span class="post">MS Scholar</span>
+                        </div>
+                    </div>
+                </div>
+
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team my-size">
+                        <div class="pic">
+                            <img src="images/asma.jpg">
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Asma Arshad</h3>
+                            <span class="post">MS Scholar</span>
+                        </div>
+                    </div>
+                </div>
+
+				<div class="col-md-4 col-sm-6">
+                    <div class="our-team my-size">
+                        <div class="pic">
+                            <img src="images/nimra.jpeg">
+                            <ul class="social">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-google-plus"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Nimra Afgan</h3>
+                            <span class="post">MS Scholar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br>
+
+        <footer>
+
+            <div class="container">
+
+
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-3">
+                        <img src="img/NCSAEL.png" alt="" height="42%" width="42%" />
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="img/NUST.png" alt="" height="42%" width="42%" />
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="img/MCS.png" alt="" height="42%" width="42%" />
+                    </div>
+                </div>
+                <br />
+
+                <p>&copy; 2021 NCSAEL, All Rights Reserved &nbsp;  &nbsp; |&nbsp; &nbsp;<a style="color: #c6be73;" href="https://www.facebook.com/CSAEL.MCS.NUST/" class="fa fa-facebook"></a> &nbsp;<a style="color: #c6be73;" href="https://www.linkedin.com/in/csael-nust-b77561170/" class="fa fa-linkedin"></a> </p>
+            </div>
+        </footer>
+
+        <!-- /container -->
+        <script src="ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <script src="js/materialize.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/jquery.pwstabs.min.js"></script>
+        <script src="js/jquery.flip.min.js" type="text/javascript"></script>
+
+        <script src="js/smooth-scroll.js"></script>
+
+        <script>
+            $('a').smoothScroll();
+
+        </script>
+        <script>
+			function dropdownMenuShowHidden(id){
+				
+				if(id=="Team"){
+					if($(".menu0").css("display")=="block"){
+						$(".menu0").css("display","none");
+					}else{
+						$(".menu0").css("display","block");
+						$(".menu1").css("display","none");
+					}
+				}else{
+				
+					if($(".menu1").css("display")=="block"){
+						$(".menu1").css("display","none");
+					}else{
+						$(".menu1").css("display","block");
+						$(".menu0").css("display","none");
+					}
+				}
+				
+				
+				}
+            $('body').scrollspy({
+                offset: 110,
+                target: '#serviceNav'
+            })
+
+            jQuery(function ($) {
+
+                // Circle Service Flip
+                $(".flipCircle").flip({
+                    axis: 'x',
+                    trigger: 'hover'
+                });
+
+                $('.tabset0').pwstabs({
+                    effect: 'scale', // You can change effects of your tabs container: scale / slideleft / slideright / slidetop / slidedown / none
+                    defaultTab: 1, // The tab we want to be opened by default
+                    containerWidth: '100%', // Set custom container width if not set then 100% is used
+                    tabsPosition: 'horizontal', // Tabs position: horizontal / vertical
+                    horizontalPosition: 'top', // Tabs horizontal position: top / bottom
+                    verticalPosition: 'left', // Tabs vertical position: left / right
+                    responsive: true, // Make tabs container responsive: true / false - boolean
+                    theme: '',
+                    rtl: false                    // Right to left support: true/ false
+
+                });
+
+                $('.tabset0').pwstabs('horizontalPosition', 'top');
+
+                // Colors Demo
+                $('.pws_demo_colors a').click(function (e) {
+                    e.preventDefault();
+                    //                     $('.pws_tabs_container').removeClass('pws_theme_grey pws_theme_violet pws_theme_green pws_theme_yellow pws_theme_gold pws_theme_orange pws_theme_red pws_theme_purple').addClass('pws_theme_' + $(this).attr('data-demo-color'));
+                });
+
+
+            });
+        </script>
+
+
+        <script>
+            $(document).ready(function () {
+
+                $('#serviceNav.navbar li a').click(function (event) {
+                    event.preventDefault();
+                    $($(this).attr('href'))[0].scrollIntoView();
+                    scrollBy(0, -offset);
+                });
+                $('#serviceNav').affix({
+                    offset: {
+                        top: 542,
+                        target: '.industryIconRow',
+                        bottom: function () {
+                            return (this.bottom = $('.footer').outerHeight(true))
+                        }
+                    }
+                })
+                $('.navigationNavbar').affix({
+                    offset: {
+                        top: 180,
+                        target: '.navigationNavbar',
+                        bottom: function () {
+                            return (this.bottom = $('.footer').outerHeight(true))
+                        }
+                    }
+                })
+
+                var wow = new WOW(
+                  {
+                      boxClass: 'wow',      // animated element css class (default is wow)
+                      animateClass: 'animated', // animation css class (default is animated)
+                      offset: 0,          // distance to the element when triggering the animation (default is 0)
+                      mobile: true,       // trigger animations on mobile devices (default is true)
+                      live: true,       // act on asynchronously loaded content (default is true)
+                      callback: function (box) {
+                          // the callback is fired every time an animation is started
+                          // the argument that is passed in is the DOM node being animated
+                      },
+                      scrollContainer: null // optional scroll container selector, otherwise use window
+                  }
+                );
+                wow.init();
+            });
+
+        </script>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </form>
+</body>
+</html>

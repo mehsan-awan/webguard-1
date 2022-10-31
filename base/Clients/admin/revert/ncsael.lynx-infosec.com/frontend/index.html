@@ -1,0 +1,883 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><title>
+	Home | Ncsael - Cyber Security
+</title><meta name="description" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="css/bootstrap.min.css" /><link href="css/fontgoogleapi.css" rel="stylesheet" /><link rel="stylesheet" href="css/bootstrap-theme.min.css" /><link rel="stylesheet" href="css/main.css" /><link rel="stylesheet" href="css/animate.min.css" /><link rel="stylesheet" href="css/hover-min.css" /><link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link href="css/infinite-slider.css" rel="stylesheet" />
+
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="js/gooletamanager.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118029809-1');
+
+	</script>
+    <script>
+        	var i=0;
+	$(document).ready(function(){
+     $('#add_more').on('click', function(){
+      var colorR = Math.floor((Math.random() * 256));
+      var colorG = Math.floor((Math.random() * 256));
+      var colorB = Math.floor((Math.random() * 256));
+      i++;
+      var html ='<div id="append_no_'+i+'" class="animated bounceInLeft">'+
+          '<div class="input-group mt-3">'+
+		  '<div class="input-group-prepend">'+
+		  '<span class="input-group-text br-15" style="color:rgb('+colorR+','+colorG+','+colorB+'">'+
+		  '<i class="fas fa-user-graduate"></i></span>'+
+		  '</div>'+
+		  '<input type="text" placeholder="Student Name"  class="form-control"/>'+
+		  '</div>'+
+		  '<div class="input-group mt-3">'+
+		  '<div class="input-group-prepend">'+
+		  '<span class="input-group-text br-15" style="color:rgb('+colorR+','+colorG+','+colorB+'">'+
+		  '<i class="fas fa-phone-square"></i></span>'+
+		  '</div>'+
+		  '<input type="text" placeholder="Student Phone" class="form-control"/>'+
+		  '</div>'+
+		  '<div class="input-group mt-3">'+
+		  '<div class="input-group-prepend">'+
+		  '<span class="input-group-text br-15" style="color:rgb('+colorR+','+colorG+','+colorB+'">'+
+		  '<i class="fas fa-at"></i></span>'+
+		  '</div>'+
+		  '<input type="email" placeholder="Student Email" class="form-control"/>'+
+		  '</div></div>';
+
+	  $('#dynamic_container').append(html);
+	  $('#remove_more').fadeIn(function(){
+	  	 $(this).show();
+	  });
+     });
+
+     $('#remove_more').on('click', function(){
+
+         $('#append_no_'+i).removeClass('bounceInLeft').addClass('bounceOutRight')
+            .fadeOut(function(){
+            	$(this).remove();
+            });
+            i--;
+            if(i==0){
+            	$('#remove_more').fadeOut(function(){
+            		$(this).hide()
+            	});;
+            }
+
+     });
+	});
+    </script>
+    <style>
+        	html,body{
+			height: 100%;
+			margin: 0;
+
+		}
+
+   .myForm{
+   	background-color: rgba(0,0,0,0.5) !important;
+   	padding: 15px !important;
+   border-radius: 15px !important;
+   color: white;
+
+   }
+
+   input{
+   	border-radius:0 15px 15px 0 !important;
+
+   }
+   input:focus{
+       outline: none;
+box-shadow:none !important;
+border:1px solid #ccc !important;
+
+   }
+
+   .br-15{
+   	border-radius: 15px 0 0 15px !important;
+   }
+
+   #add_more{
+   	color: white !important;
+   	background-color: #fa8231 !important;
+   	border-radius: 15px !important;
+   	border: 0 !important;
+
+   }
+   #remove_more{
+   	color: white !important;
+   	background-color: #fc5c65 !important;
+   	border-radius: 15px !important;
+   	border: 0 !important;
+   	display: none;
+
+   }
+
+   .submit_btn{
+   	border-radius: 15px !important;
+    background-color: #95c714 !important;
+    border: 0 !important;
+   }
+    </style>
+</head>
+<body>
+    <form method="post" action="./" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ljettXCbntCLxHs/XyQLrVFL9EEnU0lcPcnqupeq8vKSySF+8b9jtheWn3htt39d6m6Uxmthb6WoixuB+c+b6oEdBqpVnBYDbxl1aZ06rtk=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+</div>
+        <div>
+
+            
+
+            <header>
+                <div class="header">
+                    <ul>
+                        <li><a href="Contact.html" class="waves-effect waves-light btn goldBtn" id="myBtn"><span class="glyphicon glyphicon-envelope" style='font-size: 30px'></span></a></li>
+                    </ul>
+
+
+                    <nav class="navbar navbar-fixed-top navigationNavbar" role="navigation">
+                        <!-- 	 <div class="row">
+			
+			<div class="col-sm-12 waves-effect waves-light btn goldBtn" href="Home.html" style="width:100%"><h4><b >National Cyber Security Auditing and Evaluation Lab (NCSAEL NUST)<b></h4> </div>
+
+			</div> -->
+
+
+                        <div class="row " style="background-color: #02181d">
+
+                            <div class="col-sm-12 myBtn" href="Index.html">
+
+                                <h4 style="text-align: center; color: white;"><b>NATIONAL CYBER SECURITY AUDITING AND EVALUATION LAB (NCSAEL), MCS-NUST</b></h4>
+                            </div>
+                        </div>
+
+                        <div class="container" style="width:80%">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="Index.html">
+                                    <img src="img/logo.png" class="" alt="NCSAEL" /></a>
+
+
+                                <div id="navbar" class="navbar-collapse collapse pull-right">
+                                    <ul class="nav navbar-nav text-right mainNavigation">
+
+                                        <li class="active"><a href="Index.html" title="Ncsael">Home</a></li>
+                                        <li><a href="Services.html" title="Services">Services</a></li>
+                                        <li><a href="Projects.html" title="Projects">Projects</a></li>
+                                        <li><a href="recypher.html" target="_blank" title="Partners">Recypher</a></li>
+
+
+                                        <li><a href="conference.html" title="Conference">Conference</a></li>
+
+										
+										<li id="Team" onclick="dropdownMenuShowHidden(this.id)" ><a href="Team.html" class="dropdown-toggle" data-toggle="dropdown" title="Team">Team <span class="caret"></span></a>
+										
+										
+										 <ul class="dropdown-menu menu0">
+										 
+										  <li><a href="Team.html">Current Team</a></li>
+										  <li><a href="Alumni.html">Alumni</a></li>
+										</ul>
+										
+										
+										</li>
+                                        
+										
+										<li><a href="Achievements.html" title="Achievements">Achievements</a></li>
+<!--										<li><a href="Blog.html" title="Blog">Blog</a></li>-->
+                                        <li><a href="AboutUs.html" title="About Us">About us</a></li>
+<!--                                        <li><a href="Partners.html" title="Partners">Partners</a></li>-->
+
+                                   <li id="News" style="cursor:pointer;" onclick="dropdownMenuShowHidden(this.id)"  ><a  title="News">News panel<span class="caret"></span></a>
+								   
+								    <ul class="dropdown-menu menu1">
+										 
+										  <li><a href="NewsAndEvents.html">News & Events</a></li>
+										  <li><a href="FakeNews.html">Top Cyber News</a></li>
+										</ul>
+								   
+								   
+								   </li>
+
+                                        <li><a href="Contact.html" title="Contact">Contact us</a></li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <div class="redRow rowSet topBanner homeBanner">
+                <div class="inside">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-push-2 text-center" style="">
+							<!-- width: 830px; -->
+                                <!--
+                                <div class="container " style="width: 780px;">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="card col-xl-12 animated bounceInDown myForm">
+                                            <div class="card-header">
+                                                <center><h2>TRAININGS</h2></center>
+                                            </div>
+                                            <div class="card-body">
+                                                <form>
+                                                    <div id="dynamic_container">
+                                                        <div class="input-group mt-3">
+                                                           <center> <img style="width:100%;height:100%px;"  src="img/trainings2.png" alt="trainings"></center>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="card-footer"><br><br>
+                                                <a  target="_blank" href="https://forms.gle/5e24gQafc7cGpzr4A" class="btn btn-secondary btn-sm" id="add_more" style="font-size: 50px;">Register</a>
+                                            </div>
+                                        </div>
+                                    </div>
+	                            </div>
+                                -->
+
+                                <h1 class="animated fadeIn">
+                                    Don't Let Your Business be a
+                                    <br />
+                                    <span>Victim of Cyber Attack</span>
+                                </h1>
+                                <p class="animated fadeIn" style="">NCSAEL's prime emphasis is to Design and Develop Indigenous Tools to carry out Security Assessment and Auditing of foreign and local IT products/ services</p>
+								
+								
+								<!-- margin-left: 80px;text-align:center;margin-right: 120px;width: 700px;height: 80px;margin-bottom: 50px; -->
+								
+                                <ul class="list-inline text-center bannerList animated fadeInUp padVert">
+
+                                    <li><a href="AboutUs.html" class="waves-effect waves-light btn goldBtn" style ="height: 53px; bottom: 0px; width:184px "><strong>About Us</strong></a></li>
+                                    <li><a href="Services.html" class="waves-effect waves-light btn goldBtn" style ="height: 53px; bottom: 0px; width:184px "><strong>NCSAEL Services</strong></a></li>
+                                    <li><a href="NewsAndEvents.html" class="waves-effect waves-light btn goldBtn" style ="height: 53px; bottom: 0px; width:184px "><strong>What's New</strong></a></li>
+
+                                    <!--
+                                    <li><a href="AboutUs.html" class="btn outlineBtn goldOutline" style ="width:190px "><strong>About Us</strong></a></li>
+                                    <li><a href="Services.html" class="btn outlineBtn goldOutline" style ="width:190px "><strong>NCSAEL Services</strong></a></li>
+                                    <li><a href="NewsAndEvents.html" class="btn outlineBtn goldOutline" style ="width:190px "><strong>What's New</strong></a></li>
+                                    -->
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Button trigger modal -->
+
+
+
+            <div class="whiteRow rowSet industryIconRow homeTopRow">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-push-2">
+                            <div class="rowHeadline">
+                                <h2>Our Mission</h2>
+                                <div style="text-align: justify; font-size: 17px;">
+                                    <p>Higher Education Comission (HEC) and Planning Commission of Pakistan's sponsored, National Cyber Security Auditing and Evaluation Lab (NCSAEL–NUST) is an internationally recognized Cyber-Security Research Lab established at Military College of Signals, NUST. NCSAEL is Pakistan’s first source of expertise in the field of Information Security, typically focused on:</p>
+                                    <ul>
+                                        <li>Security Assessment and Auditing of foreign and local IT security products/ services.</li>
+                                        <li>Indigenous Development of specialized tools/ software for carrying out security screening and malware analysis.</li>
+                                        <li>Capacity Building for Common Criteria Testing Lab (CCTL) through Assessment of security targets.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="redRow NCSAELRow rowSet">
+                <div class="container">
+                    <div class="shieldWrap">
+                        <div class="shieldLine shieldLineDarkGray">
+                            <div class="innerShield">
+                                <img src="img/mid-icon-shield-check.png" alt=" " />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-push-2">
+                            <div class="rowHeadline">
+                                <h2>NCSAEL Services</h2>
+                                <h3>NCSAEL encompass a holistic approach right from the Design and Development to Security Assessment and Auditing of local and foreign IT Products/Sofwares</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="serviceCirclesWrap padVert">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="Services.html#valink" class="serviceLink">
+                                    <div class="serviceCircleSingle scsVa clearfix">
+                                        <img src="img/services/Security_Assessment.png" class="wow fadeIn " alt=" " />
+
+                                        <h2>Vulnerability<br />
+                                            Assessments and Auditing</h2>
+                                        <p>Determines your vulnerable IT assets as well as remediation solutions for future attack prevention </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="Services.html#nplink" class="serviceLink">
+                                    <div class="serviceCircleSingle scsNp clearfix">
+                                        <img src="img/services/Indigenous_Development.png" class="wow fadeIn " alt=" " />
+
+                                        <h2>Indigenous<br />
+                                            Development of Auditing tools </h2>
+                                        <p>Specializes in design and development of secure tools/ softwares for carrying out security evaluation of Networks, Websites, IT systems, etc</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="Services.html#aplink" class="serviceLink">
+                                    <div class="serviceCircleSingle scsAp clearfix">
+                                        <img src="img/services/Detection_of_Zero_day.png" class="wow fadeIn " alt=" " />
+
+                                        <h2>Detection<br />
+                                            of Zero Day Malwares</h2>
+                                        <p>NCSAEL is focused on proactive detection of APTs, anomalies, malicious behaviors etc., thereby preventing the risk of ever-escalating cyber-attacks</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="Services.html#eplink" class="serviceLink">
+                                    <div class="serviceCircleSingle scsEp clearfix">
+                                        <img src="img/services/Network_Security.png" class="wow fadeIn " alt="" />
+
+                                        <h2>Penetration Testing</h2>
+                                        <p>Our team of highly skilled pentesters can perform penetration testing of your organization's network, websites and other critical services</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="Services.html#nplink2" class="serviceLink">
+                                    <div class="serviceCircleSingle scstw clearfix">
+                                        <img src="img/services/Trainings_and_Workshops.png" class="wow fadeIn " alt=" " />
+
+                                        <h2>Training and Workshops</h2>
+                                        <p>Conduct Information Security trainings and workshops in the domain of Ethical Hacking, Penetration Testing, Security Auditing etc</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="Services.html#nplink3" class="serviceLink">
+                                    <div class="serviceCircleSingle scsip clearfix">
+                                        <img src="img/services/Internship_Programs.png" class="wow fadeIn " alt=" " />
+
+                                        <h2>Internship Programs</h2>
+                                        <p>NCSAEL’s Internship programs help students gain first-hand knowledge regarding Information Security and use this knowledge for the benefit of Pakistan</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="Services.html#cislink" class="serviceLink">
+                                    <div class="serviceCircleSingle scsCiso clearfix">
+                                        <img src="img/services/cctl.png" class="wow fadeIn " alt="" />
+
+                                        <h2>READINESS AND PREPAREDNESS FOR CCTL</h2>
+                                        <p>We help you prepare for the international Common Criteria Product Evaluation to move up the information security maturity curve easily</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="Services.html#nplinkCS" class="serviceLink">
+                                    <div class="serviceCircleSingle scsCS clearfix">
+                                        <img src="img/services/Information_Security.png" class="wow fadeIn " alt="" />
+
+                                        <h2>INFORMATION SECURITY CONSULTANCY SERVICES</h2>
+                                        <p>NCSAEL also provides consultancy services to organizations regarding effectively securing their network perimeter</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="list-inline text-center" style="padding-top: 20px;">
+                            <li><a href="Services.html" class="waves-effect waves-light btn blackBtn ">View Our Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="whiteRow collaborateRow rowSet">
+                <div class="container">
+
+                    <div class="shieldWrap">
+                        <div class="shieldLine">
+                            <div class="innerShield">
+                                <img src="img/mid-icon-shield-collaborate.png" alt=" " />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-push-2">
+                            <div class="rowHeadline">
+                                <h2>Endorsements</h2>
+                                <h3>What people are saying about us</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <div class="col-sm-6 text-right closeColLeft" style="padding-right: 0px; padding-left: 0px;">
+                                <div class="redCol">
+                                    <h3><strong>Yin Zhang, Asst Professor</strong> (Zhongnan University of Economics and Law, China)</h3>
+                                    <p>Information Security has developed over the last ten years as one of the important areas of research for protecting the infrastructure of a nation. There is a need for concentration of research in this area. We are looking forward to working with your group in the future</p>
+
+                                    <h3><strong>Jamal Ahmed</strong> (Military College of Signals, NUST) </h3>
+                                    <p>Seems to be a good initiative</p>
+
+
+                                </div>
+                            </div>
+                            <div class="col-sm-6 closeColRight">
+                                <div class="blueCol">
+                                    <h3><strong>Hafiz Malik, Assistant Professor</strong> (University of Michigan - Dearborn, USA)</h3>
+                                    <p>My best wishes for the success of this initiative and looking forward to contribution of this center</p>
+
+
+                                    <h3><strong>Prof. Mariagrazia Fugini</strong> (Politecnico di Milano, Italy)</h3>
+                                    <p>I'm very pleased to learn about your initiative to establish a national level center of excellence in Cyber Security in Pakistan. I consider such an activity an interesting idea, which is currently extremely necessary</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="whiteRow rowSet">
+                <div class="container">
+
+                    <div class="shieldWrap">
+                        <div class="shieldLine">
+                            <div class="innerShield">
+                                <img src="img/icon-mid-shield-important.png" alt=" " />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="background-color: #eac768;">
+                <div class="whiteRow rowSet2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-push-2">
+                                <div class="rowHeadline">
+                                    <h2 style="color: black;">Our Trusted Partners</h2>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inside">
+                    <div class="container">
+                        <section class="customer-logos slider">
+                            <div class="slide">
+                                <img src="partner/coiea.png" />
+                                <div class="text-center">
+                                    <p style="color: black; text-align: center"><b>CENTER OF EXCELLENCE IN INFORMATION ASSURANCE, KING SAUD UNIVERSITY, KSA  </b></p>
+                                </div>
+                            </div>
+
+                            <div class="slide">
+                                <img src="partner/michigan.png" />
+                                <div class="text-center">
+                                    <p style="color: black; text-align: center"><b>UNIVERSITY OF MICHIGAN, USA</b></p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="partner/politechnico.png" />
+                                <div class="text-center">
+                                    <p style="color: black;"><b>POLITECNICO DI MILANO, ITALY </b></p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="partner/KTH.png" />
+                                <div class="text-center">
+                                    <p style="color: black; text-align: center"><b>KTH ROYAL INSTITUTE OF TECHNOLOGY, STOCKHOLM, SWEDEN</b></p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="partner/tallin.png" />
+                                <div class="text-center">
+                                    <p style="color: black; text-align: center"><b>TALLINN UNIVERSITY, ESTONIA</b></p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="partner/Zhongnan.gif" />
+                                <div class="text-center">
+                                    <p style="color: black; text-align: center"><b>ZHONGNAN UNIVERSITY OF ECONOMICS & LAW, CHINA </b></p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="partner/coiea.png">
+                                <div class="text-center">
+                                    <p style="color: black; text-align: center"><b>CENTER OF EXCELLENCE IN INFORMATION ASSURANCE, KING SAUD UNIVERSITY, KSA  </b></p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="partner/michigan.png" />
+                                <div class="text-center">
+                                    <p style="color: black; text-align: center"><b>UNIVERSITY OF MICHIGAN, USA</b></p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="partner/politechnico.png" />
+                                <div class="text-center">
+                                    <p style="color: black;"><b>POLITECNICO DI MILANO, ITALY </b></p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="partner/KTH.png" />
+                                <div class="text-center">
+                                    <p style="color: black; text-align: center"><b>KTH ROYAL INSTITUTE OF TECHNOLOGY, STOCKHOLM, SWEDEN</b></p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="partner/tallin.png" />
+                                <div class="text-center">
+                                    <p style="color: black; text-align: center"><b>TALLINN UNIVERSITY, ESTONIA </b></p>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <img src="partner/Zhongnan.gif" />
+                                <div class="text-center">
+                                    <p style="color: black; text-align: center"><b>ZHONGNAN UNIVERSITY OF ECONOMICS & LAW, CHINA </b></p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <ul class="list-inline text-center bannerList animated fadeInUp padVert">
+                    <li><a href="Partners.html" class="waves-effect waves-light btn redBtn padBtnVert"><strong>Some other Partners</strong></a>
+                </ul>
+            </div>
+
+            <!-- Achievements -->
+            <div class="whiteRow collaborateRow rowSet">
+                <div class="container">
+
+                    <div class="shieldWrap">
+                        <div class="shieldLine">
+                            <div class="innerShield">
+                                <img src="img/cup.jpg" alt=" " />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-push-2">
+                            <div class="rowHeadline">
+                                <h2>Awards and Achievements</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="teamMemberRow">
+                        <div class="row">
+                            <div class="col-sm-12">
+
+                                <div class="teamMemberBioWrap">
+                                    <div class="teamMemberBio activeBio" id="teamMemberChris">
+                                        <div class="sideCaret"><i class="fa fa-caret-left " aria-hidden="true"></i></div>
+                                        <div class="bioContent">
+                                            <h3><span class="wow fadeIn"><strong>"Shoot for the moon. Even if you miss, you will land among the stars."</strong></span></h3>
+
+
+                                            <ul>
+                                                <li>Director NCSAEL, Dr. Haider Abbas has been recently awarded "Overall NUST Best Researcher Award 2018"</li>
+                                                <li>NCSAEL publishes research work in world's most prestigious IT Journal - IEEE COMM S&T(IF-20.23)"</li>
+                                                <li>NCSAEL's sponsored project "NetXploit" bagged first position at COMPPEC 19</li>
+                                                <li>NCSAEL's sponsored project "CypherMaze" won first position in SDG 9, FICS-NUST 19</li>
+                                            </ul>
+                                            <br />
+                                            <br />
+
+                                            <div class="row">
+                                                <div class="col-sm-8 col-sm-push-2">
+                                                    <ul class="list-inline text-center">
+                                                        <li><a href="Achievements.html" class="waves-effect waves-light btn blackBtn ">View Details</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!--End Achievenement-->
+
+            <div class="redRow ctaRow rowSet">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-push-2">
+                            <div class="rowHeadline">
+                                <h3><strong>All Your Security needs under one roof</strong></h3>
+                                <p>Protect your organizations and assets against internal and external cyber-attacks before they happen using NCSAEL’s services</p>
+                            </div>
+
+                            <ul class="list-inline text-center">
+                                <li><a href="Services.html" class="waves-effect waves-light btn blackBtn ">Our Security Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grayRow rowSet">
+                <div class="container">
+                    <img src="img/center-lock-circle.png" class="text-center centerOrb" alt=" " />
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-push-2">
+                            <div class="rowHeadline">
+                                <h2>Because we care, we are security aware</h2>
+                                <p>Cyber Attacks Increase by<strong> 64% </strong>every year, Is Your Business Secure?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="valueWrap">
+                        <div class="row text-center">
+                            <div class="col-sm-4">
+                                <div class="valueHighlight">
+                                    <h2>
+                                        
+                                            3 Billion</h2>
+                                    <p>Yahoo Accounts were Hacked in 2016</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="valueHighlight">
+                                    <h2>150 Million</h2>
+                                    <p>"My Fitness Pal" was Hacked, affecting Users in 2018</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="valueHighlight">
+                                    <h2>$ 2.4 Million</h2>
+                                    <p>Average cost of a Malware Attack on a compnany</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <p class="text-center"><strong>The time to change the culture towards improved cybersecurtiy is now </strong></p>
+                    <ul class="list-inline text-center">
+                        <li><a href="AboutUs.html" class="waves-effect waves-light btn redBtn padBtnVert">Learn More About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <footer>
+
+                <div class="container">
+
+
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-3">
+                            <img src="img/NCSAEL.png" alt="" height="42%" width="42%" />
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="img/NUST.png" alt="" height="42%" width="42%" />
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="img/MCS.png" alt="" height="42%" width="42%" />
+                        </div>
+                    </div>
+                    <br />
+
+                    <p>&copy; 2021 NCSAEL, All Rights Reserved &nbsp;  &nbsp; |&nbsp; &nbsp;<a style="color: #c6be73;" href="https://www.facebook.com/CSAEL.MCS.NUST/" class="fa fa-facebook"></a> &nbsp;<a style="color: #c6be73;" href="https://www.linkedin.com/in/csael-nust-b77561170/" class="fa fa-linkedin"></a> </p>
+
+
+
+
+                </div>
+            </footer>
+			
+			
+			<script src="js/jquery2.2.0.js" type="text/javascript"></script>
+			<script src="js/bootstrap3.3.6_min.js"></script>
+			<script src="js/cloudfareslick.js"></script>
+
+			
+            <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+            <script src="js/vendor/bootstrap.min.js"></script>
+
+            <script src="js/main.js"></script>
+
+            <script src="js/materialize.js"></script>
+            <script src="js/wow.min.js"></script>
+
+            <script src="js/jquery.flip.min.js" type="text/javascript"></script>
+
+            <script>
+
+                jQuery(function ($) {
+
+                    // Circle Service Flip
+                    $(".flipCircle").flip({
+                        axis: 'x',
+                        trigger: 'hover'
+                    });
+
+
+
+                });
+        </script>
+
+
+
+            <script>
+			
+			
+				function dropdownMenuShowHidden(id){
+				
+				if(id=="Team"){
+					if($(".menu0").css("display")=="block"){
+						$(".menu0").css("display","none");
+					}else{
+						$(".menu0").css("display","block");
+						$(".menu1").css("display","none");
+					}
+				}else{
+				
+					if($(".menu1").css("display")=="block"){
+						$(".menu1").css("display","none");
+					}else{
+						$(".menu1").css("display","block");
+						$(".menu0").css("display","none");
+					}
+				}
+				}
+				function RedirectToTeam(){
+				window.location="Team.html";
+				
+				}
+			
+                $(document).ready(function () {
+
+                    $('.navigationNavbar').affix({
+                        offset: {
+                            top: 180,
+                            target: '.navigationNavbar',
+                            bottom: function () {
+                                return (this.bottom = $('.footer').outerHeight(true))
+                            }
+                        }
+                    })
+
+                    var wow = new WOW(
+                      {
+                          boxClass: 'wow',      // animated element css class (default is wow)
+                          animateClass: 'animated', // animation css class (default is animated)
+                          offset: 0,          // distance to the element when triggering the animation (default is 0)
+                          mobile: true,       // trigger animations on mobile devices (default is true)
+                          live: true,       // act on asynchronously loaded content (default is true)
+                          callback: function (box) {
+                              // the callback is fired every time an animation is started
+                              // the argument that is passed in is the DOM node being animated
+                          },
+                          scrollContainer: null // optional scroll container selector, otherwise use window
+                      }
+                    );
+                    wow.init();
+                });
+
+
+    </script>
+
+
+
+            <script>
+                $(document).ready(function () {
+                    $('.customer-logos').slick({
+                        slidesToShow: 6,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: 1000,
+                        arrows: false,
+                        dots: false,
+                        pauseOnHover: false,
+                        responsive: [{
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 4
+                            }
+                        }, {
+                            breakpoint: 520,
+                            settings: {
+                                slidesToShow: 3
+                            }
+                        }]
+                    });
+                });
+</script>
+
+            <script>
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function () { scrollFunction() };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                        document.getElementById("myBtn").style.display = "block";
+                    } else {
+                        document.getElementById("myBtn").style.display = "none";
+                    }
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+</script>
+
+            
+</html>
+
+</div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,816 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Director</title>
+    <link rel="stylesheet" type="text/css" href="css/confstyle.css" />
+
+
+
+    <style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border: solid 2px black;
+   color: black;
+   font-size: 16px;
+
+}
+</style>
+
+
+
+</head>
+<body>
+
+                    <br>
+
+                <div class="tab">
+                  <button class="tablinks" onclick="openCity(event, 'Biography')" id="defaultOpen">Brief Biography</button>
+                  <button class="tablinks" onclick="openCity(event, 'Services')">Professional Services</button>
+                  <button class="tablinks" onclick="openCity(event, 'Experience')">Professional Experience</button>
+                  <button class="tablinks" onclick="openCity(event, 'Publications')">Research Publications</button>
+                  <button class="tablinks" onclick="openCity(event, 'Funding')">Research Funding</button>
+				  <button class="tablinks" onclick="openCity(event, 'Awards')">Honors and Awards</button>
+
+                </div>
+
+                <div id="Biography" class="tabcontent">
+
+
+
+                    <p style="line-height: 1.15; text-align: justify; " class="commonPara">
+					<br>
+					Haider Abbas is the Director of National Cyber Security Auditing and Evaluation Lab (NCSAEL) and the Head of R&D at MCS- NUST, Pakistan. He is a Cyber Security professional, academician, researcher and industry consultant who took professional trainings and certifications from Massachusetts Institute of Technology (MIT), United States, Stockholm University, Sweden, Stockholm School of Entrepreneurship, Sweden, IBM, USA and EC-Council. He received his MS in Engineering and Management of Information Systems (2006) and PhD in Information Security (2010) from KTH- Royal Institute of Technology, Sweden.
+					<br><br>
+					Dr. Abbas has been appointed by Springer as fulltime Regional Editor for the Neural Computing and Application (ISI-Indexed, Q1, IF 4.6) for all submission from Iran and Pakistan. He is also serving as fulltime Associate Editor for the IEEE Communication Magazine (ISI-Indexed, Q1, IF 10.2), IEEE Transactions on Information Technology in Biomedicine/IEEE Journal of Biomedical and Health Informatics (ISI-Indexed, Q1, IF 4.2), Journal of Network and Computer Applications (ISI-Indexed, Q1, IF 4.9), Electronic Commerce Research (Springer) (ISI-Indexed, Q2, IF 2.2), IEEE Access (ISI-Indexed, Q1, IF 4.0), Cluster Computing (Springer) (ISI-Indexed, Q2, IF 2.5) and KSII Transactions on Internet and Information Systems (ISI-Indexed). He has also served as Lead Guest Editor for Future Generations Computer Systems (ISI-Indexed, Q1, IF 4.9), Peer to Peer Networking and Applications (Springer) (ISI-Indexed)., IEEE Access (ISI-Indexed), Electronic Markets (ISI-Indexed) and Annals of Telecommunications (Springer) (ISI-Indexed). He has also served as Track Chair for several international conferences including IEEE ECBS-EERC’11, Serbia, IEEE CCNC’15, Nevada, USA,  IEEE MobiSPC’15 Belfort, France, IEEE WETICE’18, Paris France, IEEE Healthcom’17, Dalian, China, IEEE BHI’19, University of Illinois at Chicago, IL, USA, (2019), IEEE WETICE’19 Capri, Italy, IWCMC‘19, Tangier, Morocco, IEEE DASC’19, Fukuoka, Japan and IEEE MobiSPC’19, Halifax Nova Scotia, Canada.
+					<br><br>
+					Dr. Abbas has received several research grants totaling 300+ Million for ICT related projects from various research funding authorities (including Horizon2020, Erasmus+ etc.) and has been working on scientific projects in US, EU, KSA and Pakistan. His professional services include - but are not limited to - Journal Editorships, Industry Consultations, Workshops Chair, Technical Program Committee Member, Invited/Keynote Speaker and reviewer for several international journals and conferences. He has authored over 120 scientific research articles (with cumulative Impact Factor 360+, Citations: 6000+, H-Index: 34) in prestigious international journals (ISI-Indexed) and conferences. He is also serving as an adjunct Faculty Member at Florida Institute of Technology, United States. He is the principal advisor for several graduate and doctoral students at Florida Institute of Technology, United States, Manchester Metropolitan University, United Kingdom, National University of Sciences and Technology, Pakistan, King Saud University, KSA, and Al-Farabi Kazakh National University, Kazakhstan. He has also worked as Information Security Consultant for various multinational firms which include Government and Private organizations based in US, EU, Middle East and Pakistan.
+					<br><br>
+					Dr. Abbas has received many awards from National and International organizations. He has been declared Overall NUST University Best Researcher for 2017-2018 among all NUST constituent Colleges and Schools across Pakistan. Some of the significant awards include Research Productivity Award from Pakistan Council for Science and Technology, Best researcher award from MCS, NUST, CyberPatriot from US Airforce Association, USA and Research Excellence from COEIA, KSA. Also, in recognition of Dr. Abbas services to the international research community and excellence in professional standing, he has been awarded one of the youngest Fellows of The Institution of Engineering and Technology (IET) UK; a Fellow of The British Computer Society (BCS), UK and a Fellow of The Institute of Science and Technology, UK. He has been appointed as 1st ACM distinguished speaker from Pakistan by <a target="_blank" href="https://www.facebook.com/AssociationForComputingMachinery/?__tn__=K-R&eid=ARDVolzHVzcpxz-ALpya2XFj5BvzT7msfM7Cn6R9YZhsAz0kLZfeYgMcK1Z8t5CtTpFuh1VnYSW6yVYL&fref=mentions&__xts__%5b0%5d=68.ARA_GiGoWXVovNVYIRD7EMdll_2TrWlTHaOT-Bg5GHwLXxw7E5Inna2GwGZxsjjFZA9YjvGOvn55eNqifF63mO-GwHNJssazOA4aC1Fdy19T00from6bGmRp7z1D_n8i4XTf0ViBzOtDnd4_H55fwmO1JLIMi8mjAi6SGvyMXjoSv1uMVTRAuc_CcACZq2Z26TyQ1dR-xJasdffKq6_8l8WXMnyvoAcLv3QGvk2n_tsYZsYSMsBmTajs_cXLY9dx4ZxORYLgNRCYKsIy8l2oKo5TSRnUf1cCkddlM9p6dTBeRVx3TxP0GhOm-ZwoaAktT9mtqZ9WwZcQJMsoNRia">ACM - Association for Computing Machinery,</a> United States. He has also been elected to the grade of Senior Member of Institute of Electrical and Electronics Engineers (IEEE), USA. He has been appointed as a Member of the Board of Governors for National Information Technology Board (NITB), headed by the President of Pakistan
+					<br>
+
+					</p>
+				</div>
+
+                <div id="Services" class="tabcontent">
+					 <p class="Heading" ><b style="font-size:30px" >International Conference Chair/Co-Chair/ Invited Speaker</b></p>
+
+<!--						<p class="SubHeading" >International Conference Chair/Co-Chair/ Invited Speaker​</p>-->
+
+							<div class="col-md-12">
+
+<ol>
+<li class="commonPara">Associate Editor, The IEEE International Conference on Biomedical and Health Informatics , IEEE BHI 2019, 19 - 22 May 2019 University of Illinois at Chicago, IL, USA</li>
+
+<li class="commonPara">Track Chair, The 29th IEEE International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises 09-11 June 2021, Basque Coast - Bayonne, France</li>
+<li class="commonPara">Special issue Chair, The 18th IEEE International Conference on Dependable, Autonomic and Secure Computing (DASC 2020),  June 22-25 in Calgary, Alta </li>
+<li class="commonPara">Keynote Speaker International Conference on Information & Communication Technologies 'Next Generation Technologies' 16 - 17 November 2019 IBA, Karachi, Pakistan</li>
+<li class="commonPara">Track Chair, The 28th IEEE International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (2019), Capri, Italy </li>
+<li class="commonPara">Cyber Security Distinguished Panelist at Launch Conference of Institute of Advanced Studies, Islamabad National University, 2018 at Prime Minister House , Islamabad</li>
+
+<li class="commonPara">Workshop Chair, IEEE International Wireless Communications & Mobile Computing Conference (IWCMC 2019) , ; June 24 — 28, 2019, Tangier, Morocco</li>
+<li class="commonPara">Poster/Demo Chair, The 17th IEEE Int’l Conference on Dependable, Autonomic and Secure Computing (DASC 2019) August 5-8, 2019, Fukuoka, Japan</li>
+<li class="commonPara">Keynote Speaker at International Conference on Computer Science and Allied Technologies, Lahore Garrison University, December 2018 , Pakistan</li>
+<li class="commonPara">Keynote Speaker , IEEE International Symposium on Artificial Intelligence and Robotics 2018 (ISAIR2018), November 17-19, 2018 , Nanyang, China </li>
+<li class="commonPara">Workshop Chair International Workshop on Cyber Security and Digital Investigation (CSDI 2019) To be held in conjunction with 16th MobiSPC 2019 ), August 19-21, 2019 Halifax Nova Scotia, Canada </li>
+
+<li class="commonPara">Invited Speaker/Resource Person 8th International Workshop on 'Internet Security: Enhancing Information Exchange Safeguards' (2018), Doha, Qatar</li>
+<li class="commonPara">Track Chair, SSTM, The 27th IEEE International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (2018), Paris, France</li>
+<li class="commonPara">Track Chair, 17th International Conference on E-health Networking, Application & Services (HealthCom 2016), Munich, Germany</li>
+<li class="commonPara">Track Chair, International Conference on Information Technology- New Generations, 2015 Las Vegas, USA</li>
+<li class="commonPara">Co-Chair, IEEE International Workshop on Bigdata Analytics for Smart and connected Health, 2016, Washington DC, USA </li>
+<li class="commonPara">Track Chair, The 12th International Conference on Mobile Systems and Pervasive Computing (MobiSPC 2015) Belfort, France</li>
+<li class="commonPara">Co-Chair, IEEE Eastern European Regional Conference on the Engineering of Computer-Based Systems (2012), Serbia</li>
+<li class="commonPara">Track Chair, The 26th IEEE International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (2017), Poland</li>
+<li class="commonPara">Invited Speaker/ Academic Expert, 6th International Workshop on 'Internet Security: Enhancing Information Exchange Safeguards' (2016), Rabat, Morocco</li>
+<li class="commonPara">Invited Speaker/ Academic Expert, 5th International Workshop on 'Internet Security: Enhancing Information Exchange Safeguards' (2015), Ankara, Turkey</li>
+<li class="commonPara">Expert Panellist 6th Cyber Security Summit, (2015), Riyadh, Saudi Arabia </li>
+<li class="commonPara">Invited Speaker/ Academic Expert, 4th International Workshop on 'Internet Security: Enhancing Information Exchange Safeguards'  Dar-es-Salaam, Tanzania</li>
+<li class="commonPara">Invited Speaker at Microsoft Trusting Cloud Workshop (2015), Riyadh, KSA </li>
+<li class="commonPara">Key Note Speaker at 3rd International Workshop on 'Internet Security: Enhancing Information Exchange Safeguards' (2014), Nabeul, Tunisia</li>
+<li class="commonPara">Key Note Speaker AT  2nd COMSATS-ISESCO International Workshop on Internet Security: Enhancing Information Exchange Safeguards, (2012) Jordan</li>
+<li class="commonPara">Invited Speaker at Workshop on Internet Security: Enhancing Information Exchange Safeguards, (2011) Damascus, Syria </li>
+<li class="commonPara">Invited Speaker at IPID Annual workshop (2009), Orebro, Sweden</li>
+<li class="commonPara">Invited Speaker at 4th Annual IPID Symposium (2009), London, UK </li>
+
+</ol>
+
+							</div>
+
+
+				</div>
+
+
+                <div id="Experience" class="tabcontent">
+
+ <p class="Heading" ><b style="font-size:30px" >Professional Experience (Fulltime/Part-time)</b></p>
+
+
+						<div class="col-md-12">
+							<ol>
+
+						<li class="commonPara">Associate Professor & Head of Cyber Security Research Group (CRG), Military College of Signals, NUST, Pakistan  </li>
+						<li class="commonPara">Director/ PI, National Cyber Security Auditing and Evaluation Lab (NCSAEL-NUST), Military College of Signals, NUST, Pakistan  </li>
+
+						<li class="commonPara">Visiting Scientist, Massachusetts Institute of Technology (MIT), United States </li>
+
+						<li class="commonPara">Visiting Research Scientist at Manchester Metropolitan University, July 2019, United Kingdom ​ </li>
+
+						<li class="commonPara">Doctoral Studies Advisor, The Manchester Metropolitan University, United Kingdom  </li>
+
+						<li class="commonPara">Adjunct Faculty/ Doctoral Studies Advisor, Florida Institute of Technology (FIT), United States   </li>
+
+						<li class="commonPara">Head of R&D Department, Center of Excellence in Information Assurance (COEIA), KSA </li>
+
+						<li class="commonPara">Adjunct Faculty/ Doctoral Studies Advisor Al-Farabi Kazakh National University, Almaty, Kazakhstan </li>
+
+						<li class="commonPara">Cyber Security Consultant, Centre for Studies and Media Affairs at the Saudi Royal Court (CSMARC), KSA </li>
+
+						<li class="commonPara">Technical Editor for IEEE Journals </li>
+
+						<li class="commonPara">Cyber Security Consultant, Institute of Public Administration (IPA), KSA </li>
+
+						<li class="commonPara">Technical Editor for Springer Journals  </li>
+
+						<li class="commonPara">Cyber Security Consultant, Saudi Takaful, KSA </li>
+
+						<li class="commonPara">Technical Editor for Elsevier Journals </li>
+
+						<li class="commonPara">Cyber Security Consultant for various Govt. & Private Organizations in EU & Middle East </li>
+
+						<li class="commonPara">Research Assistant, KTH- Royal Institute of Technology, Stockholm, Sweden </li>
+
+						<li class="commonPara">Visiting Scholar, Stanford University, United States </li>
+</ol>
+
+						</div>
+                            <br>
+
+
+						</div>
+
+                <div id="Publications" class="tabcontent">
+                            <div class="col-md-12 text-center"> <p style="text-align: center;font-size:30px" ><b>Cumulative Impact Factor: 400+ , Citations : 6000+ , H-Index: 35</b></p></div>
+
+					<p class="Heading" ><b style="font-size:25px" >Selected Publications</b></p>
+
+
+						<div class="col-md-12">
+<ol>
+
+	<li class="commonPara">T. Yaqoob, H. Abbas and M. Atiquzzaman, "Security Vulnerabilities, Attacks, Countermeasures, and Regulations of Networked Medical Devices – A Review," in <b>IEEE Communications Surveys & Tutorials</b>.<br> doi: 10.1109/COMST.2019.2914094<br>
+{SCI Impact Factor: 23.7, JCR-Ranking Q1 , HEC: Category-W, Medallion: Platinum }<br><br> </li>
+
+	<li class="commonPara">K. Ullah, I. Rashid, H. Afzal, W. Iqbal, Y. A. Bangash and H. Abbas, "SS7 Vulnerabilities -A Survey & Implementation of Machine Learning Vs Rule Based Filtering for Detection of SS7 Network Attacks," in <b>IEEE Communications Surveys & Tutorials</b>.  <br>doi: 10.1109/COMST.2020.2971757<br>
+{SCI Impact Factor: 23.7, JCR-Ranking Q1 , HEC: Category-W, Medallion: Platinum }<br><br> </li>
+
+	<li class="commonPara">J. Wan; S. Tang; D. Li; S. Wang; C. Liu; H. Abbas; A. V. Vasilakos, "A Manufacturing Big Data Solution for Active Preventive Maintenance," in <b>IEEE Transactions on Industrial Informatics</b> , <br> vol.PP, no.99, pp.1-1doi: 10.1109/TII.2017.2670505 <br>
+{SCI Impact Factor: 9.1, JCR-Ranking Q1, HEC: Category-W, Medallion: Platinum }<br><br> </li>
+
+	<li class="commonPara">Baotong Chen, Jiafu Wan, Antonio Celesti, Di Li, Haider Abbas and Qin Zhang, Edge Computing in IoT-based Manufacturing , <b>IEEE Communications Magazine </b> <br>
+{SCI Impact Factor: 11.05, JCR-Ranking Q1, HEC: Category-W, Medallion: Platinum }<br><br> </li>
+
+	<li class="commonPara">Syed Wasif Abbas Hamdani, Haider Abbas, Abdul Rehman Janjua, Waleed Bin Shahid, Faisal Amjad, Malik Hamza Murtaza, Mohammad Atiquzzaman, Cybersecurity Standards in the Context of Operating System: Practical Aspects, Analysis, and Comparisons, <b>ACM Computing Surveys</b> (In Press)
+<br>{SCI Impact Factor: 7.9, JCR-Ranking Q1, HEC: Category-W, Medallion: Platinum }<br><br> </li>
+
+	<li class="commonPara">Waseem Iqbal, Haider Abbas, Pan Deng, Jiafu Wan, Bilal Rauf, Yawar Abbas, Imran Rashid, ALAM: Anonymous Lightweight Authentication Mechanism for SDN Enabled Smart Homes, <b>IEEE Internet of Things Journal</b>
+<br>{SCI Impact Factor: 9.5, JCR-Ranking Q1, HEC: Category-W, Medallion: Platinum  }<br><br> </li>
+
+	<li class="commonPara">Huimin Lu , Yin Zhang , Yujie Li , Chi Jiang, and Haider Abbas , User-Oriented Virtual Mobile Network Resource Management for Vehicle Communications , <b>IEEE Transactions on Intelligent Transportation Systems</b>
+<br>{SCI Impact Factor: 6.3, JCR-Ranking Q1, HEC: Category-W, Medallion: Platinum  }<br><br> </li>
+
+	<li class="commonPara">Ayesha Altaf, Haider Abbas, Senior Member, IEEE, Faiza Iqbal and Mahmoud Daneshmand , Robust , Secure and Adaptive Trust-Based Service Selection in Smart Buildings in the Internet of Things (IoT) , <b>IEEE Internet of Things Journal </b>(In Press)
+<br>{SCI Impact Factor: 9.5, JCR-Ranking Q1, HEC: Category-W, Medallion: Platinum }<br><br> </li>
+
+	<li class="commonPara">T. Yaqoob, H. Abbas and N. Shafqat, “Integrated Security, Safety, and Privacy Risk Assessment Framework for Medical Devices,” in <b>IEEE Transactions on Information Technology in Biomedicine / IEEE Journal of Biomedical and Health Informatics</b>
+<br>{SCI Impact Factor: 5.2, JCR-Ranking Q1}<br><br> </li>
+
+	<li class="commonPara">Waseem Iqbal, Haider Abbas, Mahmoud Daneshmand, Bilal Rauf, Yawar Abbas  An In-Depth Analysis of IoT Security Requirements, Challenges and their Countermeasures via Software Defined Security , <b>IEEE Internet of Things Journal</b>
+<br>{SCI Impact Factor: 9.5, JCR-Ranking Q1, HEC: Category-W, Medallion: Platinum  }<br><br> </li>
+
+	<li class="commonPara">Huimin Lu, Pin-Han Ho, Haider Abbas, Trung Q. Duoung, Ammar Rayes, Kemal Akkaya, Cognitive Software Defined Networks and Applications Guest Editorial, <b>IEEE Transactions On Network Science And Engineering</b>
+<br>{SCI Impact Factor: 5.2, JCR-Ranking Q1}<br><br> </li>
+
+	<li class="commonPara">Rauf, Bilal; Abbas, Haider; Iqbal, Waseem; Muqeem, Ahmed ; Waheed, Abdul, Enterprise Integration Patterns in SDN: A Reliable, Fault-tolerant Communication Framework, <b>IEEE Internet of Things Journal</b>
+<br>{SCI Impact Factor: 9.5, JCR-Ranking Q1, HEC: Category-W, Medallion: Platinum }<br><br> </li>
+
+
+<li class="commonPara">Xiao Ma; Ranran Wang; Chi Jiang; Yin Zhang, Haider Abbas,  A Name Disambiguation Module for Intelligent Robotic Consultant in <b>Industrial Internet of Things VSI: IOT Automotive Industry, Mechanical Systems and Signal Processing</b>
+<br>{SCI Impact Factor: 6.04, JCR-Ranking Q1, HEC: Category-W, Medallion: Platinum }<br><br> </li>
+
+<li class="commonPara">Rana Aamir Raza  Ashfaq,  Xizhao Wang, Joshua Zhexue  HUANG, Haider  Abbas, Yulin HE, “Fuzziness based semi-supervised learning approach for Intrusion Detection System (IDS)” Information Sciences (Elsevier)
+<br>{SCI Impact Factor: 5.9, JCR-Ranking Q1, HEC: Category-W, Medallion: Platinum }<br><br> </li>
+
+	<li class="commonPara">I. Makhdoom, M. Abolhasan, H. Abbas, R. Ping Liu and W. Ni, “Blockchain's adoption in IoT: The challenges, and a way forward,” in <b>Journal of Network and Computer Applications.</b>
+<br>{SCI Impact factor: 5.5, JCR-RANKING Q1, HEC Category-W Medallion: Platinum} <br><br></li>
+
+	<li class="commonPara">Yujie Li, Jinyang Du, Gang Hu, H Abbas , Multi-task Reading for Intelligent Legal Services, <b>Future Generation Computer Systems, Elsevier</b>
+<br>{SCI Impact factor: 6.1, JCR-RANKING Q1, HEC: Category-W, Medallion: Platinum } <br><br></li>
+
+	<li class="commonPara">Abdur Rehman Raza, Khawir Mahmood,  Muhammad Faisal Amjad, Haider Abbas, Mehreen Afzal, On the Efficiency of Software Implementations of Lightweight Block Ciphers from the Perspective of Programming Languages, <b>Future Generation Computer Systems</b>
+<br>{SCI Impact factor: 6.1, JCR-RANKING Q1, HEC: Category-W, Medallion: Platinum }<br><br></li>
+
+
+<li class="commonPara">Chun Jiang ; Jiafu Wan ; Haider Abbas , An Edge Computing Node Deployment Method Based on Improved k-Means Clustering Algorithm for Smart Manufacturing , <b>IEEE Systems Journal</b>
+<br>{SCI Impact Factor: 4.4,  JCR-Ranking Q1}<br><br> </li>
+
+
+<li class="commonPara">Y. Abbas Bangash, H. Abbas, W. Iqbal, M. Zaki Murtaza Khan, B. Rauf and H. Afzal, “Delay Reduction through Optimal Controller’s Placement to Boost Scalability in a SDDC,” in <b>IEEE Systems Journal</b>
+<br>{SCI Impact Factor: 4.4, JCR-Ranking Q1}<br><br> </li>
+
+
+<li class="commonPara">M. Imran, M. Hanif Durad, F. Aslam Khan and H. Abbas, “DAISY: A Detection and Mitigation System against Denial of Service Attacks in Software Defined Networks,” in <b>IEEE Systems Journal</b>
+<br>	{SCI Impact Factor: 4.4,  JCR-Ranking Q1} <br><br></li>
+
+
+<li class="commonPara">Zafran Khan, Naima Iltaf, Hammad Afzal, Haider Abbas, Enriching Non-negative Matrix Factorization with Contextual Embeddings for Recommender Systems, Neurocomputing
+<br>{SCI Impact Factor: 4.4,  JCR-Ranking Q1 } <br><br></li>
+
+
+<li class="commonPara">Khan, Fawad; Khan, Saad; Tahir, Shahzaib; Yaqoob, Tahreem ; Abbas, Haider; Tahir, Hasan; Ahmad, Jawad ; Li, Hui. Granular Data Access Control with Patient-Centric Policy Update for Healthcare, <b>IEEE Transactions on Emerging Topics in Computing</b> (Revision Submitted)
+<br>{SCI Impact Factor: 6.0, JCR-Ranking Q1 } <br><br></li>
+
+<li class="commonPara">Chi Jiang, Yin Zhang, Feier Qiu, Haider Abbas, Huimin Lu, TCA: Telecom Credit Assessment Assisted by Edge AI, <b>ACM Transactions on Internet Technology </b>(Revision Submitted)
+<br>{SCI Impact Factor: 3.7, JCR-Ranking Q1  }<br><br> </li>
+
+	<li class="commonPara">Yawar Abbas, Haider Abbas, Waseem Iqbal, Saddaf Rubab, SLFICE: Software Defined Networking (SDN) Based Location Privacy for Future IoT Cloud Environment, <b>IEEE Transactions on Network and Service Management</b> (Revision Submitted)
+<br>{SCI Impact Factor: 3.8,  JCR-Ranking Q1 }<br><br> </li>
+
+<li class="commonPara">Farheen Ramzan, Muhammad Usman Ghani Khan,  Muhammad Asim Rehmat,  Haidar Abbas, Mudassar A. Mughal, Automated Identification of COVID-19 and Pneumonia using Radiological Images and Deep Learning, Information Fusion (Under Review)
+<br>{SCI Impact Factor: 13.6, JCR-Ranking Q1, HEC: Category-W, Medallion: Platinum }<br><br> </li>
+
+
+<li class="commonPara">Bilal Rauf, Haider Abbas, Mohammed Atiquzzaman, Waseem Iqbal, Yawar Abbas, Hammad Afzal, Application Threats and Northbound Interface Vulnerabilities in Software Defined Networks: A Review," in <b>ACM Computing Surveys</b>. (Revision Submitted)
+<br>{SCI Impact Factor: 7.9, JCR-Ranking Q1, HEC: Category-W, Medallion: Platinum}<br><br></li>
+
+	<li class="commonPara">Shahzad, Muhamamd; Abbas, Haider; Safdar, Maliha; Malik, Jahanzaib, Orchestrating Security Assessment using Code Analysis for Embedded Devices in Industry 4.0, <b>IEEE Transactions on Emerging Topics in Computing</b> (Under Review)<br> {SCI Impact Factor: 6.0, JCR-Ranking Q1 }<br><br> </li>
+
+
+<li class="commonPara">Ayesha Altaf, Haider Abbas, Faiza Iqbal and Farrukh Aslam Khan, Distributed, Adaptive and Context-Oriented Trust Management System for Malicious Node Avoidance in Internet of Things (IoT) Based Smart City, <b>IEEE Internet of Things Journal </b> (Under Review)
+<br>{SCI Impact Factor: 9.5, JCR-Ranking Q1, HEC: Category-W, Medallion: Platinum } <br><br></li>
+
+
+<li class="commonPara">Naina Emmanuel, Haider Abbas, Mohammed Atiquzzaman, Faisal Amjad, Ali Tanveer, Waleed bin Shahid, Narmeen Shafqat, Umer Ashfaq and Aiman Almas, Security Assessment and Evaluation of Mainstream VPNs: A Comprehensive Survey," IN <b>IEEE COMMUNICATIONS SURVEYS & TUTORIALS</b> (Under Review)
+<br>{SCI IMPACT FACTOR: 22.9, JCR-RANKING Q1, HEC: Category-W, Medallion: Platinum }<br><br> </li>
+
+<li class="commonPara">Aqsa Rashid, Asif Masood, Haider Abbas, Mohammed Atiquzzaman, Blockchain based Public Key Infrastructure: A Transparent Digital Certificate Mechanism for Secure Communication, <b>IEEE Communications Magazine </b>(Under Review)
+<br>{SCI Impact Factor: 10.2, JCR-Ranking Q1, HEC Category-W Medallion: Platinum}<br><br> </li>
+</ol>
+
+						</div>
+
+
+
+
+<!--				<p class="SubHeading" >Other Publications</p>-->
+                    <br>
+                        <p class="Heading" ><b style="font-size:25px" >Other Publications</b></p>
+
+
+						<div class="col-md-12">
+<!--                            <div class="col-md-12 text-center"> <p style="color:red;" ><b>Cumulative Impact Factor: 350+ , Citations : 5500+ , H-Index: 34</b></p></div>-->
+
+
+<ol>
+
+<li class="commonPara">Shah Fahad,  Mehreen Afzal, Waseem Iqbal, Haider Abbas, Correlation Power Analysis of Modes of Encryption in AES and its Countermeasures, Future Generation Computer Systems (Elsevier),
+<br>{ SCI Impact factor: 6.1, JCR Q1, HEC: Category-W, Medallion: Platinum }<br><br></li>
+
+<li class="commonPara">Muzammil Noor , Haider Abbas, Waleed Bin Shahid,  Countering cyber threats for industrial applications: An automated approach for malware evasion detection and analysis, Journal of Network and Computer Applications (Elsevier)
+<br>{ SCI Impact factor: 5.5, JCR Q1, HEC: Category-W, Medallion: Platinum }<br><br></li>
+
+<li class="commonPara">T. Yaqoob, A. Arshad, H. Abbas, M. Faisal Amjad and N. Shafqat, “Framework for Calculating Return on Security Investment (ROSI) for Security Oriented Organizations,” in Future Generation Computer Systems (Elsevier).
+<br>{SCI Impact factor: 6.1, JCR-RANKING Q1, HEC Category-W Medallion: Platinum}<br><br> </li>
+
+
+<li class="commonPara">Muhammad Yaseen, Abdelouahid Derhab, Mehmet Orgun, Haider Abbas, Imran Rashid, Waseem Iqbal , Secure Sensors Data Acquisition and Communication Protection in eHealthcare: Review on State of the Art, Telematics and Informatics (Elsevier)
+<br>{ SCI Impact factor: 3.3, JCR Q1, HEC Category-W Medallion: Platinum}<br><br></li>
+
+<li class="commonPara">Y. Zhang, H. Wen, F. Qiu, Z. Wang and H. Abbas, “iBike: Intelligent public bicycle services assisted by data analytics,” in Future Generation Computer Systems.
+<br>{SCI Impact factor: 6.1, JCR-RANKING Q1, HEC Category-W Medallion: Platinum}<br><br></li>
+
+<li class="commonPara">S. Shi, D. Jin, Y. Zhang, H. Abbas and G. Pan, “A Complex Event Processing Framework for an Adaptive Language Learning System,” in Future Generation Computer Systems (Elsevier).
+<br>{SCI Impact factor: 6.1, JCR-RANKING Q1, HEC Category-W Medallion: Platinum}<br><br></li>
+
+
+<li class="commonPara">Aqsa Rashid, Asif Masood, Haider Abbas, Cryptographic Framework for Role Control Remedy: A Secure Role Engineering Mechanism for Single Authority Organizations, Future Generation Computer Systems
+<br>{SCI Impact factor: 6.1, JCR-RANKING Q1, HEC: Category-W, Medallion: Platinum}<br><br></li>
+
+
+<li class="commonPara">Ramsha Saeed, Hammad Afzal, Sadaf Abdul Rauf, Naima Iltaf, H Abbas, Raheel Nawaz, A Framework to detect Hate and Offensive Speech on Social Media using Hybrid Deep Learning Techniques, Future Generation Computer Systems  (Revision Submitted)
+<br>{SCI Impact factor: 5.9, JCR-RANKING Q1, HEC: Category-W, Medallion: Platinum }<br><br></li>
+
+<li class="commonPara">Muhammad Asim Rehmat, Muhammad Shahbaz, Asad Raz, Haider Abbas, A Unified Framework for Automated Inspection of Handheld Safety Critical Devices in Production Assemblies, Future Generation Computer Systems- Elsevier
+<br>{ SCI Impact factor: 6.1, JCR Q1, HEC Category-W Medallion: Platinum} <br><br></li>
+
+
+<li class="commonPara">Naveeda Ashraf, Ashraf Masood, Haider Abbas, Rabia Latif, Narmeen Shafqat, “Analytical Study of Hardware-Rooted Security Standards and their Implementation Techniques in Mobile Devices” Telecommunication Systems, Springer
+<br>{SCI Impact factor: 1.7, JCR-RANKING Q2}<br><br></li>
+
+
+<li class="commonPara">Fawad Khan, Hui Li, Ying ,hui Zhang, Haider Abbas, Tahreem Yaqoob, Efficient Attribute Based Encryption with Repeated Attributes Optimization, International Journal of Information Security (Springer)
+<br>{SCI Impact Factor: 1.8, JCR-Ranking Q2}<br><br></li>
+
+
+<li class="commonPara">Maheen Fatima Bhutta, Haider Abbas, Waseem Iqbal, Narmeen Shafqat Secure Image Deletion Framework for Android-N (Nougat) IEEE Transactions on Information Forensics & Security (Under Review)
+<br>{SCI Impact factor: 6.2, JCR-RANKING Q2, HEC: Category-W, Medallion: Platinum }<br><br></li>
+
+<li class="commonPara">Muhammad Faisal Amjad, , Hammad Afzal, Haider Abbas, AdS: An Adaptive Spectrum Sensing Technique for Defense Against Jamming Attack in IEEE 802.22 Cognitive Radio Networks, IEEE systems Journal (Under Review)
+<br>{SCI Impact factor: 4.6,  JCR-RANKING Q1 }<br><br></li>
+
+<li class="commonPara">Shahzaib Tahir, Hasan Tahir, Ruhma Tahir, Ali Sajjad, Haider Abbas,  Water is a Viable Data Storage Medium: A Security and Privacy Viewpoint IEEE Communication Magazine (Under Review)
+<br>{SCI Impact factor: 10.4, JCR-RANKING Q1, HEC: Category-W, Medallion: Platinum }<br><br></li>
+
+
+<li class="commonPara">Muhammad Shehzad, Haider Abbas, Tahreem Yaqoob, Narmeen Shafqat, Ashraf Masood, Waleed bin Shahid Automated Framework for Security Assessment of Filesystem of Embedded Devices Firmware IEEE Transactions on Information Forensics & Security (Under Review)
+<br>{SCI Impact factor: 6.2, JCR-RANKING Q2, HEC: Category-W, Medallion: Platinum }<br><br></li>
+
+
+<li class="commonPara">Adeela Waqar, Waleed Bin Shahid, Haider Abbas, Narmeen Shafqat, Yawar Abbas Bangash Risk Management Framework for Security Operations Center as a Service (SOCaaS) based on Audit Guidelines Journal of Information Security and Applications, Elsevier (Under Review)
+<br>{SCI IMPACT FACTOR: 1.5, JCR-RANKING Q2}<br><br></li>
+
+<li class="commonPara">Zafran Khan, Naima Iltaf, Hammad Afzal, Haider Abbas, Deep Semantic based Topic Driven Hybrid Recommender System, Computer Communications
+<br>{SCI Impact factor: 2.7, JCR-RANKING Q2}<br><br></li>
+
+
+<li class="commonPara">Tauseef Rana, Yawar Abbas Bangash , And Haider Abbas, Flow Constraint Language for Coordination by Exogenous Connectors, IEEE Access (IEEE)
+<br>{ SCI Impact factor: 4.0, JCR  Q1 }<br><br></li>
+
+
+<li class="commonPara">R. Yunus, O. Arif, H. Afzal, M. Faisal Amjad, H. Abbas, H. Noor Bokhari, S. Tazeen Haider, N. Zafar and R. Nawaz, “A Framework to Estimate the Nutritional Value of Food in Real Time Using Deep Learning Techniques,” in IEEE Access.
+<br>{SCI Impact factor: 4.0,  JCR-RANKING Q1}<br><br></li>
+
+<li class="commonPara">A. Mehtab, W. Bin Shahid, T. Yaqoob, M. Faisal Amjad, H. Abbas, H. Afzal and M. Najmus Saqib, “AdDroid: Rule based Machine Learning Framework for Android Malware Analysis,” in Mobile Networks and Applications.
+<br>{SCI Impact factor: 2.4, JCR-RANKING Q1 }<br><br></li>
+
+
+<li class="commonPara">M. Jahangir, H. Afzal, M. Ahmed, K. Khurshid, F. Amjad, R. Nawaz and H. Abbas, “Auto-MeDiSine: An Auto-Tunable Medical Decision Support Engine using an automated Class Outlier Detection method and AutoMLP,” in Neural Computing and Applications (Springer).
+<br>{SCI Impact factor: 4.6, JCR-RANKING Q1,   }<br><br></li>
+
+<li class="commonPara">Y. Abbas Bangash, T. Rana, H. Abbas, M. Ali Imran and A. Ahmed Khan, “Incast Mitigation in a Data Center Storage Cluster through a Dynamic Fair-share Buffer Policy,” in IEEE Access.
+<br>{SCI Impact factor: 4.0,  JCR-RANKING Q1}<br><br></li>
+
+<li class="commonPara">A. Altaf, H. Abbas, F. Iqbal and A. Derhab, “Trust Models of Internet of Smart Things: A Survey,” in Journal of Network and Computer Applications.
+<br>{SCI Impact factor: 5.3, JCR-RANKING Q1, HEC Category-W Medallion: Platinum} <br><br></li>
+
+<li class="commonPara">Y. Zhang , H. Abbas, Y. Sun, “Smart e-commerce integration with recommender systems” in Electronic Markets, Electronic Markets https://doi.org/10.1007/s12525-019-00346-x
+<br>{SCI Impact factor: 3.8, JCR-RANKING Q1 }<br><br> </li>
+
+<li class="commonPara">R. Zojaj Naeem, S. Bashir, M. Faisal Amjad, H. Abbas and H. Afzal, “Survey on Fog Computing in IoT - Fog Architectures, Practical Applications and Future Directions,” in Peer-to-Peer Networking and Applications Systems.
+<br>{SCI Impact factor: 1.2, JCR-RANKING Q3 }<br><br></li>
+
+<li class="commonPara">Z. Khana, N. Iltaf, H. Afzal and H. Abbas, “Enriching Non-negative Matrix Factorization with Contextual Embeddings for Recommender Systems,” in Neurocomputing
+<br>{SCI Impact factor: 3.241,  JCR-RANKING Q1} <br><br> </li>
+
+<li class="commonPara">O. Arif, H. Afzal, H. Abbas, M. Faisal Amjad, J. Wan and R. Nawaz, “Accelerated Dynamic MRI using Kernel-Based Low Rank Constraint,” in Journal of Medical Systems.
+<br>{SCI Impact factor: 2.4, JCR-RANKING Q2 }<br><br></li>
+
+<li class="commonPara">G. Zheng, W. Yang, C. Valli, R. Shankaran, H. Abbas, G. Zhang, G. Fang, J. Chaudhary and L. Qiao, “Fingerprint Access Control for Wireless Insulin Pump Systems Using Cancelable Delaunay Triangulations,” in IEEE Access.
+<br>{SCI Impact factor: 4.0,  JCR-RANKING Q1}<br><br></li>
+
+<li class="commonPara">M. Yaseen, W. Iqbal, H. Abbas, I. Rashid, M. Mohsin, Y. Abbas Bangash and K. Saleem, “MARC: A Novel Framework for Detecting MITM Attacks in eHealthcare BLE Systems,” in Journal of Medical Systems.
+<br>{SCI Impact factor: 2.4, JCR-RANKING Q2 }<br><br></li>
+
+<li class="commonPara">Dawei Jin, Xiao Ma, Yin Zhang, Haider Abbas, Han Yu, Information Diffusion Model based on Social Big Data, Mobile Networks and Applications- Springer
+<br>{ SCI Impact factor: 3.2, JCR Q1  } <br><br></li>
+
+<li class="commonPara">Kazmi, Asif  Raza; Afzal, Mehreen; Amjad, Muhammad Faisal; Abbas, Haider ; yang, Xiaodong; Xidian, “Algebraic Side Channel Attack on Trivium & Grain”, IEEE Access (IEEE)
+<br>{ SCI Impact factor: 3.2, JCR  Q1 }<br><br></li>
+
+
+<li class="commonPara">Zeeshan Anwar , Hammad Afzal , Nazia Bibi , Haider Abbas, Athar Mohsin, Omar Arif, A Hybrid-Adaptive Neuro-Fuzzy Inference System for Multi-Objective Regression Test Suites Optimization, Neural Computing and Applications (Springer)
+<br>{ SCI Impact factor: 4.2, JCR Q1}<br><br></li>
+
+<li class="commonPara">Afsheen Ahmed, Rabia Latif,  Seemab Latif,  Haider Abbas, Farrukh Aslam Khan,  Malicious Insiders Attack in IoT based Cloud e-Healthcare environment: A Systematic Literature Review, Multimedia Tools and Applications-Springer
+<br>{ SCI Impact factor: 1.5, JCR Q2  }<br><br></li>
+
+
+<li class="commonPara">Saim Bin Abdul Khaliq; Muhammad Faisal Amjad, Haider Abbas, Narmeen Shafqat, Defence Against PUE Attacks in Ad hoc Cognitive Radio Networks: A Mean Field Game Approach,  Telecommunication Systems - Springer
+<br>{ SCI Impact factor: 1.7, JCR Q3 }<br><br></li>
+
+<li class="commonPara">Rashid Masood Khan, Waseem Iqbal ,Muhammad Faisal Amjad, Haider Abbas, Hammad Afzal, Abdul Rauf, Maruf Pasha, “Forensic investigation to detect forgeries in ASF files of contemporary IP cameras” , Journal of Supercomputing-Springer
+<br>{ SCI Impact factor: 2.1,  Q2 }<br><br></li>
+
+
+<li class="commonPara">Nan Zhao , Xiaodong Yang , Aifeng Ren , Zhiya Zhang , Wei Zhao , Fangming Hu , Masood Ur Rehman , Haider Abbas , and Mehran Abolhasan,  Antenna and Propagation Considerations for Amateur UAV Monitoring , IEEE Access (IEEE)
+<br>{ SCI Impact factor: 3.2, JCR  Q1 }<br><br></li>
+
+
+<li class="commonPara">Adeel Shah, Haider Abbas, Rabia Latif and Waseem Iqbal,  Enhancing E-Healthcare Privacy Preservation Framework through L-Diversity,  14th International Wireless Communications and Mobile Computing Conference (IWCMC 2018), Limassol, Cyprus <br><br></li>
+
+<li class="commonPara">Anum Javaid, Imran Rashid , Haider Abbas, Mariagrazia Fugini, Ease or Privacy? A Comprehensive Analysis of Android Embedded Adware, 27th International Conference on Enabling Technologies: Infrastructure for Collaborative Enterprises (WETICE-2018) Paris, France<br><br></li>
+
+
+<li class="commonPara">Yin Zhang, Haider Abbas, CrossRec: Cross-domain Recommender Systems based on Multi-source Social Big Data" IEEE Transactions on Big Data (Under Review)
+<br>{ SCI Impact factor: 4.7, JCR Q1 }<br><br></li>
+
+<li class="commonPara">Muhammad Asim, Muhammad Faisal Amjad, Mian Muhammad Waseem Iqbal, Hammad Afzal , Yin Zhang AndroKit: A Toolkit for Forensics Analysis of Web Browsers on Android Platform , Future Generation Computer Systems- Elsevier
+<br>{ SCI Impact factor: 6.1, JCR Q1, HEC Category-W Medallion: Platinum}<br><br> </li>
+
+
+<li class="commonPara">Amman Durrani, Rabia Latif, Seemab Latif, Haider Abbas, Detection of Distributed Denial of Service (DDoS) Attack in Vehicular adhoc networks: A Systematic Literature Review, Ad Hoc & Sensor Wireless Networks
+<br>{ SCI Impact factor: 1.0, JCR Q4}<br><br></li>
+
+<li class="commonPara">Ghada Almashaqbeh, Jamal N. Al-Karaki, Mohammad Al-Rousan, Asad Raza, Haider Abbas, Maruf Pasha, Geo-Energy Aware Routing Protocol for Static and Mobile Wireless Sensor Networks, Ad Hoc & Sensor Wireless Networks
+<br>{ SCI Impact factor: 1.0, JCR Q4 }<br><br></li>
+
+
+<li class="commonPara">Anum Sajjad , Mehreen Afzal  ,Waseem Iqbal , Haider Abbas, Athanasios V. Vasilakos, Kleptographic Attack on Elliptic Curve Based Protocols , Journal of Cryptology (Under Review)
+<br>{ SCI Impact factor: 1.2, JCR Q2  }<br><br></li>
+
+<li class="commonPara">Yawar Abbas Bangash, Hammad Afzal, Bilal Rauf, Haider Abbas, Muhammad Faisal Amjad, Yin Zhang, Optimal Controller's Placement to Boost Scalability in Wireless Sensor Networks, IEEE Sensors Journal (Under Review)
+<br>{ SCI Impact factor: 2.5, JCR Q1,   }<br><br></li>
+
+
+<li class="commonPara">Muhammad Yaseen , Waseem Iqbal , Imran Rashid  , Haider Abbas  , Mujahid Mohsin , MARC: A Novel Framework for Detecting MITM Attacks in eHealthcare BLE Systems , Telematics and Informatics
+<br>{ SCI Impact factor: 3.2, JCR Q1, HEC: Category-W, Medallion: Platinum }<br><br></li>
+
+<li class="commonPara">Omar Arif, Hammad Afzal, Haider Abbas, Faisal Amjad, Jiafu Wan and Raheel Nawaz , Accelerated Dynamic MRI using Kernel-Based Low Rank Constraint, Journal of Medical Systems (Under Review)
+<br>{ SCI Impact factor: 2.3, JCR Q2 }<br><br></li>
+
+
+<li class="commonPara">Muhammad Imran, Farrukh Aslam Khan, Haider Abbas, “A Detection and Prevention System against Collaborative Attacks in Mobile Ad hoc Networks” Future Generation Computer Systems  (Elsevier),
+<br>{ SCI Impact factor: 6.1, JCR Q1, HEC: Category-W, Medallion: Platinum }<br><br></li>
+
+<li class="commonPara">Nur Al Hasan Haldar, Farrukh Aslam Khan, Aftab Ali, Haider Abbas, “Arrhythmia Classification using Mahalanobis Distance based Improved Fuzzy C-Means Clustering for Mobile Health Monitoring Systems”(2016) Neurocomputing (Elsevier),
+<br>{  SCI Impact factor: 3.3, JCR  Q1}<br><br></li>
+
+
+<li class="commonPara">Muhammad Umair Aslam, Abdelouahid Derhab, Kashif Saleem, Haider Abbas, Mehmet Orgun, Waseem Iqbal, Baber Aslam,  A Survey of Authentication Schemes in Telecare Medicine Information Systems, Journal of Medical System (Springer)
+<br>{ SCI Impact factor: 2.4, JCR Q2 }<br><br></li>
+
+
+<li class="commonPara">Yang, Xiaodong, Abbas, Haider. 2017. "Adaptive Interference Cancellation of ECG Signals." Sensors 17, no. 5: 942.
+<br>{ SCI Impact factor: 2.6, JCR Q2 }<br><br></li>
+
+<li class="commonPara">Bilal Javeed, Waseem Iqbal & Haider Abbas, Internet of Things (IoT) Design Considerations for Developer and Manufacturers, IEEE International Conference on Communications (IEEE ICC) 21-25 May 2017, Paris, France<br><br></li>
+
+
+<li class="commonPara">Ayesha Arshad, Waseem Iqbal, H. Abbas, USB Devices Forensic in Windows  10 – Digging Insertion and  Removal Timestamps , Journal of Forensic Sciences (Wiley)
+<br>{ SCI Impact factor: 1.3, JCR Q2   }<br><br> </li>
+
+<li class="commonPara">Ijaz Ahmad, Haider Abbas, Asad Raza, Kim-Kwang Raymond Choo, Anam Sajid, Maruf Pasha, Farrukh Aslam Khan, “Electronic Crime Investigations in a Virtualized Environment: A Forensic Process and Prototype for Evidence Collection and Analysis” Australian Journal of Forensics Sciences (Taylor & Francis)
+<br>{ SCI Impact factor: 0.7, JCR Q3   }<br><br></li>
+
+
+<li class="commonPara">Farrukh Aslam Khan,Umar Manzoor,Azhar Khan,Aftab Ali,Haider Abbas, Maruf Pasha, Peer-to-Peer File Sharing Framework for Smartphones: Deployment and Evaluation on Android, Journal of Information Science and Engineering
+<br>{ SCI Impact factor: 0.85, JCR Q4  }<br><br></li>
+
+<li class="commonPara">Haider Abbas, Olaf Maennel, Saïd Assar: Security and privacy issues in cloud computing, Annals of Telecommunications ( Springer) (72(5-6): 233-235 (2017)
+<br>{ SCI Impact factor: 1.4, JCR Q4   }<br><br></li>
+
+
+<li class="commonPara">Nazish Yaqoob,Seemab Latif,Rabia Latif,Haider Abbas,Asif Yaseen  , An Adaptive Rule-Based Approach to Resolving Real-Time VoIP Wholesale Billing Disputes, Journal of Information Science and Engineering
+<br>{ SCI Impact factor: 0.85, JCR Q4  }<br><br></li>
+
+<li class="commonPara">Tahreem Yaqoob, Faiza Mir, Haider abbas, Waleed bin Shahid, Narmean Shafqat and Muhammad Faisal Amjad, Feasibility Analysis for Deploying National Healthcare Information System (NHIS) for Pakistan,  19th International Conference of E-health Networking, Application & Services, IEEE HEalthcom17, Dalian, China<br><br></li>
+
+
+<li class="commonPara">Muneeb Ahmed Sahi, Haider Abbas, Kashif Saleem, Yang, Xiaodong , Abdelouahid Derhab, Mehmet Orgun, Waseem Iqbal, Imran Rashid, Asif Yaseen “A Survey on Privacy Preservation in e-Healthcare Environment” (2017) IEEE Access (IEEE)
+<br>{ SCI Impact factor: 3.2, JCR  Q1 }<br><br></li>
+
+<li class="commonPara">Haider Abbas, Rabia Latif, Seemab Latif, Ashraf Masood, “Performance Evaluation of Enhanced Very Fast Decision Tree (EVFDT) Mechanism for Distributed Denial of Service Attack Detection in Healthcare Systems” (2016) Annals of Telecommunications (Springer)
+<br>{Impact factor: 1.4 , ISI-EI Indexed   }<br><br></li>
+
+
+<li class="commonPara">Haider Abbas, Sana Ullah, Sudip Misra, Yuh-Shyan Chen, “Guest editorial: Secure cloud computing for mobile health services” (2016) Peer-to-Peer Networking and Applications (Springer)
+<br>{Impact factor: 1.2, ISI-EI Indexed  }<br><br></li>
+
+<li class="commonPara">Muhammad Irfan, Haider Abbas, Yunchuan Sun, Maruf Pasha, “A Framework for Cloud Forensics Analysis using Security Information and Event Management” (2016) Security and Communication Networks (Wiley)
+<br>{Impact factor: 1.0 , ISI-EI Indexed  }<br><br></li>
+
+
+<li class="commonPara">Rabia Latif, Haider Abbas, Seemab latif, Ashraf Masood “DDOS Attack Source Detection Using Efficient Traceback Technique (ETT) in Cloud-Assisted Healthcare Environment” (2016) Journal of Medical System (Springer)
+<br>{Impact factor: 2.4, ISI-EI Indexed  }<br><br> </li>
+
+<li class="commonPara">Haider Abbas,  Sana Ullah,  Sudip Misra,  Yuh-Shyan Chen, “Guest editorial: Secure cloud computing for mobile health services” (2016) Peer-to-Peer Networking and Applications (Springer)
+<br>{Impact factor: 1.2, ISI-EI Indexed  }<br><br></li>
+
+
+<li class="commonPara">Anam Sajid, Haider Abbas, Kashif Saleem, “Cloud-Assisted IoT-Based SCADA Systems Security: A Review of the State of the Art and Future Challenges” (2016) IEEE Access
+<br>{ISI-EI Indexed, IF 3.2,   }<br><br></li>
+
+<li class="commonPara">Haider Abbas, Muhammad Yasin, Fahad Ahmed, Anam Sajid, Farrukh Aslam Khan, Rana Aamir Raza Ashfaq, Nur Al Hasan Haldar: Forensic artifacts modeling for social media client applications to enhance investigatory learning mechanisms. Journal of Intelligent and Fuzzy Systems (IoS Press) 31(5): 2645-2658 (2016)
+<br>{Impact factor: 1.8, ISI-EI Indexed  }<br><br></li>
+
+
+<li class="commonPara">Anam Sajid, Haider Abbas, “Data Privacy in Cloud-assisted Healthcare Systems: State of the art and Future Challenges”(2016)  Journal of Medical System (Springer)
+<br>{Impact factor: 2.4, ISI-EI Indexed  }<br><br></li>
+
+<li class="commonPara">Kashif Saleem , Mehmet Orgun, Guanglou Zheng and Rajan Shankaran , Haider Abbas and Jalal Al Muhtadi , Empirical Studies of ECG Multiple Fiducial-points Based Binary Sequence Generation (MFBSG) Algorithm in E-Health Sensor Platform, The 41st IEEE Conference on Local Computer Networks (LCN), November 7-10, 2016, Dubai, UAE<br><br></li>
+
+
+<li class="commonPara">Waleed Halboob, Haider Abbas, Muhammad Khurram Khan, Farrukh Aslam Khan, Maruf Pasha, “A Framework To Address Inconstant User Requirements In Cloud SLAs Management “ (2015) Springer Cluster Computing
+<br>{Impact factor: 2.0, ISI-EI Indexed  }<br><br></li>
+
+<li class="commonPara">Ramsha Rizwan, Farrukh Aslam Khan, Haider Abbas, Sajjad Hussain Chauhdary, “Anomaly Detection in Wireless Sensor Networks Using Immune-based Bio-inspired Mechanism” (2015) International Journal of Distributed Sensor Networks
+<br>{Impact factor: 1.4, ISI-EI Indexed  }<br><br></li>
+
+
+<li class="commonPara">Rabia Latif, Haider Abbas, Seemab Latif, Ashraf Masood, “EVFDT: An Enhanced Very Fast Decision Tree Algorithm for Detecting Distributed Denial of Service Attack in Cloud- Assisted Wireless Body Area Networks” (2015) Mobile Information Systems
+	<br>{Impact factor: 2.2, ISI-EI Indexed   }<br><br></li>
+
+<li class="commonPara">Muhammad Irfan, Haider Abbas, Waseem Iqbal, “Feasibility Analysis for Incorporating/Deploying SIEM for Forensics Evidence Collection in Cloud Environment” 14th IEEE/ACIS International Conference on Computer and Information Science 2015, Las Vegas, U.S.A<br><br></li>
+
+
+<li class="commonPara">Waleed Halboob, Ramlan Mahmod, Muhammad Abulaish, Haider Abbas, Kashif Saleem , “Data Warehousing Based Computer Forensics Investigation Framework” 2015 12th International Conference on Information Technology : New Generations, Las Vegas, Nevada, USA<br><br></li>
+
+<li class="commonPara">Rabia Latif, Haider Abbas, Said Assar, “Distributed Denial of Service (DDoS) Attack in Cloud- Assisted Wireless Body Area Networks: A Systematic Literature Review”(2014) Journal of Medical System (Springer)
+<br>{Impact factor: 2.4 , ISI-EI Indexed  }<br><br></li>
+
+
+<li class="commonPara">Moeen Qaemi, Haider Abbas, Farrukh Aslam Khan, Maruf Pasha, “Identifying Security Mechanism for Anti-Phishing Scheme for OpenID Systems” (2014) Security and Communication Networks (Wiley)
+<br>{Impact factor: 1.0, ISI-EI Indexed  }<br><br></li>
+
+<li class="commonPara">Saifullah Khalid, Ashraf Masood, Faisal Bashir Hussain, Haider Abbas and Abdul Ghafoor, "Load Balanced Routing for Lifetime Maximization in Mobile Wireless Sensor Networks" (2014) International Journal of Distributed Sensor Networks
+<br>{Impact factor: 1.4, ISI-EI Indexed  }<br><br></li>
+
+
+<li class="commonPara">Rabia Latif, Haider Abbas, Seemab Latif, “Location Based DDoS Attack Detection Using Data Mining Approach in Cloud-Assisted WBAN” (2014) International Journal of Ad Hoc and Ubiquitous Computing
+<br>{Impact factor: 0.7, ISI-EI Indexed, HEC Category-Y Medallion: Null}<br><br></li>
+
+
+
+<li class="commonPara">Waleed Halboob, Haider Abbas, Kamel Haouam, Asif Yaseen, "Dynamic Service Level Agreement (SLA) Management for Cloud Computing" (2014) Advanced Intelligent Computing Technology and Applications, Lecture Notes in Artificial Intelligence – Springer<br><br></li>
+
+
+<li class="commonPara">Muhammad Imran, Farrukh Aslam Khan, Haider Abbas, Mohsin Iftikhar, "Detection and Prevention of Black Hole Attacks in Mobile Ad hoc Networks" (2014) Springer - Lecture Notes in Computer Science<br><br></li>
+
+<li class="commonPara">Rabia Latif, Haider Abbas, SaÃ¯d Assar, Seemab Latif, "Analyzing Feasibility for Deploying Very Fast Decision Tree for DDoS Attack Detection in Cloud Assisted WBAN" (2014) Intelligent Computing Methodologies - Lecture Notes in Computer Science – Springer<br><br></li>
+
+
+<li class="commonPara">Natasha Shoaib, Haider Abbas, Farrukh Aslam Khan, Jalal Al Muhtadi, "Anticipating Advanced Persistent Threat (APT) Countermeasures using Security Information and Event Management" (2014) IEEE International Symposium on Biometric and Security Technologies (ISBAST14) , August 26-27, 2014, Kuala Lumpur, Malaysia<br><br></li>
+
+<li class="commonPara">Farrukh Aslam Khan, Aftab Ali, Haider Abbas, Nur Al hasan, "A Cloud-based Healthcare Framework for Security and Patients' Data Privacy using Wireless Body Area Networks" (2014) 9th International Conference on Future Networks and Communications (FNC-2014), August 17-20, 2014, Niagara Falls, Ontario, Canada<br><br></li>
+
+
+<li class="commonPara">Amna Saeed, Asad Raza, Haider Abbas, "A Survey on Network Layer Attacks and AODV Defense in Mobile Ad-hoc Networks" (2014) 8th IEEE International Conference on Software Security and Reliability, San Francisco , USA<br><br></li>
+
+
+
+
+
+<li class="commonPara">Adeela Waqar, Asad Raza, Haider Abbas, “Preservation of Cloud Users’ Data Privacy in a Eucalyptus Supported Private Cloud Environment through Database Schema Redesign” (2013)  Journal of Network and Computer Applications - Elsevier
+<br>{Impact factor: 3.5, ISI-EI Indexed, HEC: Category-W, Medallion: Platinum }<br><br></li>
+
+<li class="commonPara">Sarah Irum, Farrukh Aslam Khan, Aftab Ali, Haider Abbas, "A Hybrid Security Mechanism for Intra-WBAN and Inter-WBAN Communication" (2013) International Journal of Distributed Sensor Networks
+<br>{Impact factor: 1.4, ISI-EI Indexed  }<br><br></li>
+
+<li class="commonPara">Rabia Latif, SaÃ¯d Assar, Haider Abbas, Qasim Ali, "Cloud Computing Risk Assessment: A Systematic Literature Review" (2013) Springer Lecture Notes in Electrical Engineering<br><br></li>
+
+
+<li class="commonPara">Rida Naveed, Haider Abbas, "Security Requirement Specification Framework for Cloud Users" (2013) Springer, Lecture Notes in Computer Science<br><br></li>
+
+<li class="commonPara">Shoohira Aftab, Amna Khalid, Asad Raza, Haider Abbas, "Secure SMS Based Automatic Device Pairing Approach for Mobile Phones" (2013) Springer- Lecture Notes in Artificial Intelligence<br><br></li>
+
+
+<li class="commonPara">Zeshan Aslam Khan, Edison Pignaton de Freitas, Tony Larsson, Haider Abbas, "A Multi-agent Model for Fire Detection in Coal Mines using Wireless Sensor
+Networks" (2013) 12th IEEE International Conference on Trust, Security and Privacy in Computing and Communications , Melbourne, Australia<br><br></li>
+
+<li class="commonPara">Muzzamil Noor, Haider Abbas, "Anticipating Dormant Functionality in Malware A Semantics based Approach" (2013) The 2013 International Symposium on Biometrics and Security Technologies, Chengdu, Sichuan China, July 2-5, 2013<br><br></li>
+
+
+<li class="commonPara">Muhammad Junaid Khan, Haider Abbas, "WLAN Location Privacy: A Client Server Based Architecture" (2013) 10th IEEE International Conference on Information Technology - New Generations , April 15-17, 2013, Las Vegas, Nevada, USA<br><br></li>
+
+<li class="commonPara">Moeen Qaemi Mahmoodzadeh, Haider Abbas, “Password-Less Authentication Framework for OpenID Systems to Counter Phishing Attacks”, 7Th IEEE Asia-Pacific Services Computing Conference 2012, December 6-8, 2012, Guilin, China<br><br></li>
+
+
+<li class="commonPara">Saneeha Khalid, Haider Abbas, Maruf Pasha, Asad Raza, “Securing Internet Information Services (IIS) Configuration Files” , 7th IEEE International Conference for Internet Technology and Secured Transactions (ICITST-2012), December 10-12, 2012, London, UK<br><br></li>
+
+<li class="commonPara">Faraz Hameed, Haider Abbas, Maruf Pasha, Louise Yngström, “Feasibility Analysis for Deploying a Centralized Information Exchange Infrastructure in Pakistan”, 5th Annual SIG GlobDev Workshop :ICT Innovation in Developing Regions, December 16, 2012, Orlando, United States
+<br><br></li>
+
+<li class="commonPara">Abbas Haider, Christer Magnusson, Louise Yngström, Ahmed Addressing Dynamic Issues in Information Security Management” (2011) Journal of Information & Computer Security (IMCS), Emerald Group Publishing Limited, UK Hemani, “<br><br></li>
+
+<li class="commonPara">Adeela Waqar, Asad Raza, Haider Abbas “User Privacy Issues in Eucalyptus: A Private Cloud Computing Environment”, IEEE 10th International Conference on Trust, Security and Privacy in Computing and Communications ,2011<br><br></li>
+
+
+<li class="commonPara">Abbas Haider, Christer Magnusson, Louise Yngström, Ahmed Hemani, “A Structured Approach for Internalizing Externalities Caused by IT Security Mechanisms”, In Proceedings of IEEE International Workshop on Education Technology and Computer Science (ETCS 2010), March 6-7, 2010, Wuhan, China, pages 149-153<br><br></li>
+
+<li class="commonPara">Faraz Hameed, Abbas Haider, Louise Yngström, “Analyzing Opportunities and Constraints for Deploying a Centralized Information Exchange Infrastructure in Pakistan, Submitted to IEEE International Computer Symposium (ICS2010), Tainan, Taiwan<br><br></li>
+
+
+<li class="commonPara">Asad Raza, Abbas Haider, Louise Yngström, Ahmed Hemani, “Security Evaluation of ESAM Architecture using ATAM”, in Proceedings of 3rd Annual ICT4D Postgraduate Symposium, September 8-9 2008, Joensuu, Finland<br><br></li>
+
+<li class="commonPara">Abbas Haider, Louise Yngström, Ahmed Hemani, “Security Evaluation of IT Products: Bridging the Gap between Common Criteria (CC) and Real Option Thinking”, In Proceedings of the World Congress on Engineering and Computer Science 2008, October 22-24, 2008, San Francisco, USA, pages 530- 533<br><br></li>
+
+<li class="commonPara">Asad Raza, Abbas Haider, Louise Yngström, Ahmed Hemani, “Security Characterization for Evaluation of Software Architectures using A T AM”, In Proceedings of Third  IEEE International Conference on Information & Communication Technologies (ICICT2009), August 15-16 2009, Karachi, Pakistan, pages 241-246<br><br></li>
+
+
+<li class="commonPara">Abbas Haider, Louise Yngström, Ahmed Hemani, “Empowering Security Evaluation of IT Products by Real Options Theory”, 30th IEEE Symposium on Security & Privacy, May 17- 20, 2009, Oakland, California, USA<br><br></li>
+
+<li class="commonPara">Abbas, Haider, Louise Yngström, Ahmed Hemani, “Adaptability infrastructure for bridging IT security evaluation and options theory”, In Proceedings of 2nd IEEE/ACM International Conference on Security of Information and Networks (SIN 2009) October 6-10, 2009, North Cyprus, pages 39-45<br><br></li>
+
+
+<li class="commonPara">Abbas Haider, Louise Yngström, Ahmed Hemani, “Option Based Evaluation: Security Evaluation of IT Products Based on Options Theory”, In Proceedings of IEEE Eastern European Regional Conference on the Engineering of Computer Based Systems, September 7th-8th 2009, Novi Sad, Serbia, pages 134-141<br><br></li>
+
+<li class="commonPara">Abbas Haider, Louise Yngström, Ahmed Hemani, “Analyzing IT Security Evaluation Methodologies for Developing Countries”, 2009 IPID Annual workshop, Orebro, Sweden<br><br></li>
+
+
+<li class="commonPara">Abbas Haider, Christer Magnusson, Louise Yngström, Ahmed Hemani, “ROA Based Agile Security Evaluation of IT Products for Developing Countries”, 4th Annual IPID Symposium 2009, September 11th & 12th, London, UK<br><br></li>
+
+<li class="commonPara">Abbas Haider, Stefan Sundqvist, “Increasing the Performance of Crab Linux Router Simulation Package using XEN”, In Proceedings of IEEE conference on industrial and information systems, August 8-11 2006, Kandy, Sri Lanka, pages 459-46<br><br></li>
+
+</ol>
+
+
+						</div>
+
+                </div>
+
+
+
+				<div id="Funding" class="tabcontent">
+
+				 <p class="Heading" ><b style="font-size:30px" >Research Fundings  : 2.5+ Million USD</b></p>
+
+
+						<div class="col-md-12">
+							<ol>
+<li class="commonPara">"Rethinking Cybersecurity in Pakistan - Human Factors' Essential Role", "Erasmus+: Capacity Building in Higher Education" Funded by The European Union , 2020</li>
+
+<li class="commonPara">Cyber Security Auditing & Evaluation Lab (CSAEL), a constituent lab for National Centre for Cyber Security (NCCS) 2018</li>
+
+<li class="commonPara">Research Collaborator for AMASS (Architecture-driven, Multi-concern and Seamless Assurance and Certification of Cyber-Physical Systems), MDH, Sweden , Horizon 2020</li>
+
+<li class="commonPara">SRGP Grant, Traffic Accident Prediction Model using Deep Learning and Machine learning Algorithms Funded by:  HEC, Pakistan</li>
+
+<li class="commonPara">SRGP Grant, Temper Resistant Database Log update via Blockchain Funded by: HEC, Pakistan</li>
+
+<li class="commonPara">Hand-based Biocrypto system and Crypto Key Computation,  National Plan for Science Technology and Innovation of Kingdom of Saudi Arabia</li>
+
+<li class="commonPara">Performance Enhancement for the Crab Linux router simulation package using XEN, Funded by:  KTH, Royal Institute of Technology, Sweden 2005</li>
+
+<li class="commonPara">PhD Scholarship from National University of Sciences & Technology, Pakistan, 2006</li>
+
+<li class="commonPara">Security Evaluation of ESAM architecture Using ATAM, Funded by:  VERVA (Swedish Administrative Development Agency) Stockholm, Sweden   2007</li>
+
+<li class="commonPara">Cloud Security Mechanisms for Saudi Organizations, Funded by:  National Plan for Science and Technology, Saudi Arabia, 2013</li>
+
+<li class="commonPara">Challenges and Opportunities in Next Generation Data Security and Information Assurance, Funded by:   Deanship of Scientific Research, King Saud University, Saudi Arabia 2013</li>
+
+<li class="commonPara">Information Security Mechanisms for Real Wireless Mesh Network Scenario, Funded by:  National Plan for Science and Technology, Saudi Arabia, 2013</li>
+
+<li class="commonPara">Evaluating the Impact and Significance of Recent Advances in Data Privacy and Applications Security, Funded by:   Deanship of Scientific Research, King Saud University, Saudi Arabia 2014</li>
+
+<li class="commonPara">ROA-Based Cloud Computing SLA Model to Address Dynamically Changing Requirements, Funded by:   Research Centre, College of Computer Science, King Saud University, Saudi Arabia 2014</li>
+
+</ol>
+						</div>
+
+
+
+				</div>
+
+
+				<div id="Awards" class="tabcontent">
+
+						   <p class="Heading" ><b style="font-size:30px" >Honors and Awards (International / National)</b></p>
+
+
+						<div class="col-md-12">
+<ol>
+<li class="commonPara">Member of the Board of Governors for National Information Technology Board (NITB), Government of Pakistan​</li>
+
+<li class="commonPara">Appointed as 1st ACM Distinguished Speaker from Pakistan by ACM - Association for Computing Machinery, United States</li>
+
+<li class="commonPara">Overall NUST University Best Researcher Award 2018</li>
+
+<li class="commonPara">Awarded the Grade of Fellow from The Institution of Engineering and Technology (FIET), UK</li>
+
+<li class="commonPara">Awarded the Grade of Fellow from The British Computer Society (FBCS), UK</li>
+
+<li class="commonPara">Awarded the Grade of Fellow from The Institute of Science & Technology (FIsT), UK</li>
+
+<li class="commonPara">Elected to the Grade of Senior Member form Institute of Electrical and Electronics Engineers (SMIEEE), USA</li>
+
+<li class="commonPara">Member, Association for Information Systems Special Interest Group on ICT and Global Development, USA</li>
+
+<li class="commonPara">Research Productivity Award 2017-2018 by the Pakistan Council for Science and Technology (PCST)</li>
+
+<li class="commonPara">Best Researcher Award 2017, Military College of Signals , NUST , Pakistan </li>
+
+<li class="commonPara">CyberPatriot from NG, US Airforce Association, USA</li>
+
+<li class="commonPara">Graduate Faculty/ Member Advisory Board for Doctoral and Graduate Studies, Florida Institute of Technology (FIT), USA</li>
+
+<li class="commonPara">Best Poster Award, Empowering Security Evaluation of IT Products with Options Theory, 30th IEEE Symposium on Security & Privacy (IEEE S&P), 2009, California, USA</li>
+
+<li class="commonPara">Plaque of Appreciation from CyberPatriot, National Youth Cyber Education Program, 2015, USA</li>
+
+<li class="commonPara">NUST Faculty Development Program Scholarship for Doctoral Studies at KTH, Sweden</li>
+
+<li class="commonPara">Member, Association for Information Systems Special Interest Group on ICT and Global Development, USA</li>
+
+<li class="commonPara">Plaque of Appreciation for Organizational Security Training from Royal Scientific Society (RSS), 2012, Amman, Jordan</li>
+
+<li class="commonPara">Won many research grants from both the government sector and private industry</li>
+
+<li class="commonPara">HEC Approved Supervisor for Doctoral Studies, Pakistan</li>
+
+<li class="commonPara">Plaque of Appreciation for Cyber Security Training from Higher Institute for Applied Sciences and Technology (HIAST), 2011, Damascus, Syria</li>
+
+<li class="commonPara">Plaque of Appreciation for Information Security Training from Tanzania Commission for Science & Technology (COSTECH), 2014, Tanzania</li>
+
+<li class="commonPara">Certificate of Appreciation for Cyber Security Training from Islamic Educational, Scientific and Cultural Organization (ISESCO), 2016, Rabat, Morocco </li>
+
+<li class="commonPara">Certificate of Appreciation for Cyber Security Training from the Training Centre for Islamic Countries (SESRIC), 2015, Ankara, Turkey</li>
+
+<li class="commonPara">Certificate of Appreciation for Academic Expert/Resource person from Inter-Islamic Network on Information Technology (INIT), Pakistan</li>
+
+<li class="commonPara">Graduate & Doctoral Thesis Examiner for various universities in Pakistan, EU and the United States </li>
+
+<li class="commonPara">Certificate of Appreciation for Academic Expert/Resource person from Commission on Science and Technology for Sustainable Development is south (COMSATS)</li>
+
+<li class="commonPara">ISMS Team Lead & Manager RnD, Center of Excellence in Information Assurance, KSA</li>
+
+<li class="commonPara">Certificate of Appreciation for Cyber Security Training from Higher Institute of Technological Studies (ISET), 2013, Nabeul, Tunisia</li>
+
+<li class="commonPara">Subject Specialist for various selection committees/ panelist for various Government and Private Organizations</li>
+
+<li class="commonPara">Plaque of Appreciation for Information Security Training from Al-Farabi Kazakh National University, Kazakhstan, 2017 </li>
+
+<li class="commonPara">Plaque of Appreciation for Cyber Security Training Qatar National Commission for Education, Culture and Science, 2018​</li>
+
+</ol>
+
+						</div>
+
+
+				</div>
+
+
+
+
+
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,153 @@
+{% extends "base_site.html" %}
+{% block title %} Fetch {% endblock title %}
+
+{% block stylesheets %}
+<style>
+ #api_Progress {
+  width: 100%;
+  background-color: gray;
+}
+
+#api_Bar {
+  width: 0%;
+  height: 30px;
+  background-color: #2FCC13;
+  text-align: center;
+  line-height: 30px;
+  color: #000;
+}
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+
+  {% include "site_template/navigation.html" %}
+
+  {% include "site_template/top-stats.html" %}
+<div class="container">
+<div class="row">
+    <div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading text-center">
+            <br>
+            <br>
+
+          <h1>Defacement Bot</h1>
+
+
+      </div>
+      <div class="panel-body">
+          <div class="row">
+
+              <div class="col-md-12 text-center">
+                    <input type="button" class="btn btn-primary" onclick="getTrustedConfigBtn()"  value="Get Trusted Copies"/>
+                    <br>
+                  <br>
+              </div>
+
+              <div class="col-md-12 text-center">
+                    <select class="form-control"  id="trustedCopies" >
+                        <option value="" disabled>Select Your Website</option>
+                    </select>
+              </div>
+
+              <div class="col-md-12 text-right">
+<!--                  <label>Last Config: <span id="dateTimeForLastConfig" >Date Time</span> </label>-->
+                  <br>
+
+              </div>
+              <div class="col-md-12 mb-3 text-center">
+
+                  <input type="button" class="btn btn-success" onclick="StartBtn()"  value="Start"/>
+
+                  <input type="button" class="btn btn-danger" onclick="StopBtn()" value="Stop"/>
+
+              </div>
+
+
+          </div>
+        <hr id="ModSecurityHLINE" style="display:None; width:80%;  display: block; margin-top: 0.5em;  margin-bottom: 0.5em;  margin-left: auto;  margin-right: auto;  border-style: inset;  border-width: 5px;">
+<!--                 <h3 class="text-center">{{ request.user.id }}</h3>-->
+
+         <h3 class="text-center">Scan Progress</h3>
+             <div id="api_Progress" >
+                 <div id="api_Bar"></div>
+             </div>
+
+
+<!--        <hr  style="display:None; width:80%;  display: block; margin-top: 0.5em;  margin-bottom: 0.5em;  margin-left: auto;  margin-right: auto;  border-style: inset;  border-width: 5px;">-->
+
+
+          <div class="form-group">
+              <textarea id="textareaforoutput" class="form-control" style="min-height:265px;" readonly></textarea>
+
+          </div>
+
+
+
+      </div>
+    </div>
+
+    </div>
+
+</div>
+
+</div>
+
+{% include "site_template/footer.html" %}
+{% endblock content %}
+
+
+{% block javascripts %}
+
+
+    <script>
+
+        var user_id = JSON.parse("{{request.user.id|escapejs}}")
+
+        if (window.location.protocol == 'https:') {
+            wsProtocol = 'wss://'
+        }  else {wsProtocol = 'ws://'}
+
+
+        // Socket for progress bar
+        console.log(wsProtocol + window.location.host + '/ws/' + user_id + '/')
+        const socket =new WebSocket(wsProtocol + window.location.host + '/ws/' + user_id + '/');
+
+        socket.onopen =function(e)      {
+            console.log('Bar Connection Established for '+ user_id);
+        };
+
+
+        socket.onmessage = function(e)      {
+            var recData=JSON.parse(e.data);
+            console.log(e.data)
+
+            if (recData.value)   {
+                var elem = document.getElementById("api_Bar");
+                elem.style.width = recData.value + "%";
+                elem.innerHTML = recData.value + "%";
+                }
+
+            if (recData.value2)     {
+                var val_in_textarea = $("#textareaforoutput").val();
+                console.log(val_in_textarea)
+
+                var updated_text = val_in_textarea + "\n" + recData.value2
+                $("#textareaforoutput").val(updated_text)
+                }
+
+        }
+
+
+        socket.onclose = function(e)    {
+            console.log('Connection CLosed');
+        }
+
+
+
+
+    </script>
+
+
+{% endblock javascripts %}

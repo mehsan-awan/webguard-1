@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+
+<!--
+
+=========================================================
+* Argon Dashboard - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<html lang="en">
+
+<head>
+  {% block head %}
+    <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block meta %}
+
+    {% endblock meta %}
+
+  <title>
+    WEB GUARD {% block title %}{% endblock %}
+  </title>
+
+    <!-- Favicon -->
+    <link href="{% static 'assets/img/brand/favicon.png' %}" rel="icon" type="image/icon type">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Icons -->
+    <link href="{% static 'assets/js/plugins/nucleo/css/nucleo.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="{% static 'assets/css/argon-dashboard.css' %}" rel="stylesheet">
+  {% block stylesheets %}
+  {% endblock stylesheets %}
+
+  {% endblock head %}
+</head>
+
+<body class="bg-default">
+
+  <div class="main-content">
+
+    {% include 'site_template/navigation-auth.html' %}
+
+    {% include 'site_template/header-auth.html' %}
+
+    {% block content %}{% endblock %}
+
+    {% include 'site_template/footer-auth.html' %}
+
+  </div>
+
+    <!-- Core -->
+    <script src="{% static 'assets/js/plugins/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Optional JS -->
+    <script src="{% static 'assets/js/plugins/chart.js/dist/Chart.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/chart.js/dist/Chart.extension.js' %}"></script>
+    <!-- Argon JS -->
+    <script src="{% static 'assets/js/argon-dashboard.min.js' %}"></script>
+    {% block javascripts %}
+    {% endblock javascripts %}
+
+</body>
+
+</html>

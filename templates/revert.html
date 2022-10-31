@@ -1,0 +1,146 @@
+
+{% extends "base_site.html" %}
+{% load static %}
+
+{% block title %} Alert {% endblock title %}
+
+{% block stylesheets %}
+  {% endblock stylesheets %}
+
+ {% block javascripts %}
+<script src="{% static 'assets/js/my_dj_js.js' %}"></script>
+{% endblock javascripts %}
+
+{% block content %}
+
+  {% include "site_template/navigation.html" %}
+
+  {% include "site_template/top-stats.html" %}
+
+    <div class="container-fluid mt--7">
+
+       <div class="row">
+      <div class="col-xl-12 col-md-12 col-xs-12 col-lg-12">
+        <div class="card shadow">
+          <div class="card-header bg-transparent">
+            <div class="row align-items-center">
+              <div class="col">
+                <h1 class="mb-0">Restore Website</h1>
+
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+       <div class="row">
+      <div class="col-xl-6 col-md-6 col-xs-6 col-lg-6">
+        <div class="card shadow">
+          <div class="card-header bg-transparent">
+            <div class="row">
+              <div class="col">
+                <h1 class="mb-0">Restore Server Files</h1>
+                <br>
+
+                <div class="get_url" style="margin-left:10%; margin-right:auto;">
+
+                      <form method="POST" action="/revert/">
+                           {% csrf_token %}
+                        <span style="display: block;">
+                          <label for="back_website">Website: </label>
+                          <input type="text" id="back_website" name="back_website" ><br><br>
+                        </span>
+
+                        <span style="display: block;">
+                          <label for="ftp_backend_server">FTP Server:  </label>
+                          <input type="text" id="ftp_backend_server" name="ftp_backend_server" ><br><br>
+                        </span>
+
+                        <span style="display: block;">
+                          <label for="ftp_backend_user">Username:  </label>
+                          <input type="text" id="ftp_backend_user" name="ftp_backend_user" ><br><br>
+                        </span>
+
+                        <span style="display: block;">
+                          <label for="ftp_backend_pass">Password:  </label>
+                          <input type="password" id="ftp_backend_pass" name="ftp_backend_pass" ><br><br>
+                        </span>
+                          <input type="button" class="btn btn-success" onclick="revert_back_changes()"  value="Restore"/>
+                      </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-6 col-xs-6 col-lg-6">
+        <div class="card shadow">
+          <div class="card-header bg-transparent">
+            <div class="row align-items-center">
+              <div class="col">
+                <h1 class="mb-0">Restore Static Files</h1>
+                <br>
+
+                <div class="get_url" style="margin-left:10%; margin-right:auto;">
+
+                      <form method="POST" action="/revert/">
+                           {% csrf_token %}
+
+                        <span style="display: block;">
+                          <label for="front_website">Website: </label>
+                          <input type="text" id="front_website" name="front_website" ><br><br>
+                        </span>
+
+                        <span style="display: block;">
+                          <label for="ftp_frontend_server">FTP Server:  </label>
+                          <input type="text" id="ftp_frontend_server" name="ftp_frontend_server" ><br><br>
+                        </span>
+
+                        <span style="display: block;">
+                          <label for="ftp_frontend_user">Username:  </label>
+                          <input type="text" id="ftp_frontend_user" name="ftp_frontend_user" ><br><br>
+                        </span>
+
+                        <span style="display: block;">
+                          <label for="ftp_frontend_pass">Password:  </label>
+                          <input type="password" id="ftp_frontend_pass" name="ftp_frontend_pass" ><br><br>
+                        </span>
+<!--                          <input type="submit" value="Submit"><br><br>-->
+                          <input type="button" class="btn btn-success" onclick="revert_front_changes()"  value="Restore"/>
+                      </form>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+        {% include "site_template/footer.html" %}
+
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+{% load static %}
+<!--
+
+=========================================================
+* Argon Dashboard - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!--<!DOCTYPE html>-->
+<html lang="en">
+
+<head>
+  {% block head %}
+     <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block meta %}
+
+    {% endblock meta %}
+
+  <title>
+    WebGuard -
+    {% block title %}
+    {% endblock title %}
+  </title>
+
+
+    <!-- Favicon -->
+    
+    <link href="{% static 'assets/img/brand/favicon.png' %}" rel="icon" type="image/icon type">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Icons -->
+    <link href="{% static 'assets/js/plugins/nucleo/css/nucleo.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="{% static 'assets/css/argon-dashboard.css' %}" rel="stylesheet">
+    
+    <!-- custom CSS -->
+    <link href="{% static 'assets/css/Custom.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/toastr.css' %}" rel="stylesheet">
+
+    <link href="//cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+
+{% block stylesheets %}
+  {% endblock stylesheets %}
+
+
+    <!--  JS   -->
+     <!-- Core -->
+    <script src="{% static 'assets/js/plugins/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Optional JS -->
+    <script src="{% static 'assets/js/plugins/chart.js/dist/Chart.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/chart.js/dist/Chart.extension.js' %}"></script>
+    <!-- Argon JS -->
+    <script src="{% static 'assets/js/argon-dashboard.min.js' %}"></script>
+
+      <!-- speedometer -->
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+    <!-- My custom scripts -->
+      <script src="{% static 'assets/js/my_dj_js.js' %}"></script>
+
+    <script src="{% static 'assets/js/MyJS.js' %}"></script>
+    <script src="//cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="{% static 'assets/js/raphael.min.js' %}"></script>
+      <script src="{% static 'assets/js/justgage.js' %}"></script>
+    <script src="{% static 'assets/js/toastr.js' %}"></script>
+  {% block javascripts %}
+  {% endblock javascripts %}
+
+  {% endblock head %}
+
+
+
+
+</head>
+
+<body class="">
+
+  {% include "site_template/sidebar.html" %}
+
+  <div class="main-content">
+
+    {% block content %}
+
+    {% endblock content %}
+
+  </div>
+
+
+
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Image</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center" id="ModalMainBody">
+        <img src="" id="ImageToZoomIn" class="img img-rounded img-responsive" />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>
