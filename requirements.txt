@@ -21,3 +21,4 @@ scikit-image
 opencv-python
 imutils
 django-environ
+gunicorn
