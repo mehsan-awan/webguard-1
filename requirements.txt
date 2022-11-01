@@ -16,6 +16,6 @@ folium~=0.12.1
 ipinfo~=4.2.0
 pyexiftool~=0.1.1
 django-axes
-lxml
+#lxml
 #scikit-image==0.17.2
 django-environ-0.9.0
