@@ -7,6 +7,7 @@ colorama~=0.4.3
 bs4~=0.0.1
 beautifulsoup4~=4.9.1
 idna~=2.8
+cmake
 cryptography~=3.4.7
 channels~=3.0.4
 psutil~=5.7.2
